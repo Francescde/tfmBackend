@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+<name>Terminals</name>
+<Snippet maxLines="2">Created 26/04/2019 08:42:26</Snippet>
+<Folder>
+<name>Terminals</name>
+<Placemark><name>01070</name><description>201070 EXTERN
+posicio de les: 26/04/2019 08:39:23</description><styleUrl>#w_grocP</styleUrl><Point><coordinates>2.09018111228943,41.5086758136749,0</coordinates></Point></Placemark>
+<Placemark><name>03373</name><description>203373 GRAE
+posicio de les: 26/04/2019 08:40:42</description><styleUrl>#w_groc</styleUrl><Point><coordinates>1.47235035896301,42.3606419563293,0</coordinates></Point></Placemark>
+<Placemark><name>03472</name><description>203472 GRAE
+posicio de les: 26/04/2019 08:37:57</description><styleUrl>#w_groc</styleUrl><Point><coordinates>2.13436245918274,41.4999532699585,0</coordinates></Point></Placemark>
+<Placemark><name>04291</name><description>204291 
+posicio de les: 26/04/2019 08:36:36</description><styleUrl>#w_verd</styleUrl><Point><coordinates>2.9747200012207,42.0296037197113,0</coordinates></Point></Placemark>
+<Placemark><name>BGRAF09</name><description>204409 P.UT
+posicio de les: 26/04/2019 08:41:01</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>1.82547926902771,41.7247760295868,0</coordinates></Point></Placemark>
+<Placemark><name>04490</name><description>204490 
+posicio de les: 26/04/2019 08:42:26</description><styleUrl>#w_verd</styleUrl><Point><coordinates>2.18998074531555,41.5434587001801,0</coordinates></Point></Placemark>
+<Placemark><name>05821</name><description>205821 BASE
+posicio de les: 26/04/2019 08:42:09</description><styleUrl>#w_groc</styleUrl><Point><coordinates>1.24250650405884,42.518527507782,0</coordinates></Point></Placemark>
+<Placemark><name>VIEL17</name><description>208017 BASE CCA VARAN
+posicio de les: 26/04/2019 08:42:08</description><styleUrl>#w_verd</styleUrl><Point><coordinates>0.7965087890625,42.7079772949219,0</coordinates></Point></Placemark>
+<Placemark><name>08090</name><description>208090  VARAN
+posicio de les: 26/04/2019 08:42:06</description><styleUrl>#w_groc</styleUrl><Point><coordinates>0.79700231552124,42.7080738544464,0</coordinates></Point></Placemark>
+<Placemark><name>10082</name><description>210082  REGIÓ
+posicio de les: 26/04/2019 08:39:40</description><styleUrl>#w_groc</styleUrl><Point><coordinates>1.85145378112793,41.7411160469055,0</coordinates></Point></Placemark>
+<Placemark><name>10086</name><description>210086  REGIÓ
+posicio de les: 26/04/2019 08:42:31</description><styleUrl>#w_verd</styleUrl><Point><coordinates>2.11302280426025,41.4965736865997,0</coordinates></Point></Placemark>
+<Placemark><name>10090</name><description>210090  REGIÓ
+posicio de les: 26/04/2019 08:38:56</description><styleUrl>#w_groc</styleUrl><Point><coordinates>2.22782135009766,41.5552496910095,0</coordinates></Point></Placemark>
+<Placemark><name>10093</name><description>210093  REGIÓ
+posicio de les: 26/04/2019 08:39:15</description><styleUrl>#w_verd</styleUrl><Point><coordinates>2.24949359893799,41.9298470020294,0</coordinates></Point></Placemark>
+<Placemark><name>BER05</name><description>210305 PORT BER (Centre)
+posicio de les: 26/04/2019 08:40:22</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>1.85800909996033,42.103568315506,0</coordinates></Point></Placemark>
+<Placemark><name>10334</name><description>210334 BFP BER (Centre)
+posicio de les: 26/04/2019 08:40:59</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>1.85803055763245,42.1041369438171,0</coordinates></Point></Placemark>
+<Placemark><name>10390</name><description>210390 UPC BER (Centre)
+posicio de les: 26/04/2019 08:38:44</description><styleUrl>#w_groc</styleUrl><Point><coordinates>1.85160398483276,42.1043837070465,0</coordinates></Point></Placemark>
+<Placemark><name>CAF56</name><description>210456 PORT.COM CAF (Centre)
+posicio de les: 26/04/2019 08:39:11</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>1.52811884880066,41.7309558391571,0</coordinates></Point></Placemark>
+<Placemark><name>10530</name><description>210530 BRP CAR (Centre)
+posicio de les: 26/04/2019 08:37:33</description><styleUrl>#w_verdC</styleUrl><Point><coordinates>1.7049515247345,41.9007933139801,0</coordinates></Point></Placemark>
+<Placemark><name>10590</name><description>210590 UPC CAR (Centre)
+posicio de les: 26/04/2019 08:39:28</description><styleUrl>#w_verd</styleUrl><Point><coordinates>1.70572400093079,41.8998491764069,0</coordinates></Point></Placemark>
+<Placemark><name>11044</name><description>211044 BNP MAN (Centre)
+posicio de les: 26/04/2019 08:40:44</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>1.85227990150452,41.7417597770691,0</coordinates></Point></Placemark>
+<Placemark><name>11048</name><description>211048 BUL MAN (Centre)
+posicio de les: 26/04/2019 08:40:51</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>1.82601571083069,41.7248940467834,0</coordinates></Point></Placemark>
+<Placemark><name>11060</name><description>211060 AEA/AES/ABA MAN (Centre)
+posicio de les: 26/04/2019 08:42:24</description><styleUrl>#w_verdC</styleUrl><Point><coordinates>1.96994304656982,41.9300615787506,0</coordinates></Point></Placemark>
+<Placemark><name>MOI5</name><description>211105 PORT MOI (Centre)
+posicio de les: 26/04/2019 08:41:27</description><styleUrl>#w_grocP</styleUrl><Point><coordinates>2.08655476570129,41.8117225170136,0</coordinates></Point></Placemark>
+<Placemark><name>11130</name><description>211130 BRP MOI (Centre)
+posicio de les: 26/04/2019 08:39:01</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.086501121521,41.8117761611938,0</coordinates></Point></Placemark>
+<Placemark><name>PRA07</name><description>211407 PORT PRA (Centre)
+posicio de les: 26/04/2019 08:41:08</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.03647255897522,42.0079958438873,0</coordinates></Point></Placemark>
+<Placemark><name>11430</name><description>211430 BRP PRA (Centre)
+posicio de les: 26/04/2019 08:39:07</description><styleUrl>#w_verdC</styleUrl><Point><coordinates>2.03616142272949,42.0081031322479,0</coordinates></Point></Placemark>
+<Placemark><name>11990</name><description>211990 UPC SOLS (Centre)
+posicio de les: 26/04/2019 08:42:23</description><styleUrl>#w_verd</styleUrl><Point><coordinates>1.66054487228394,41.9296646118164,0</coordinates></Point></Placemark>
+<Placemark><name>12090</name><description>212090 UPC TOR (Centre)
+posicio de les: 26/04/2019 08:42:25</description><styleUrl>#w_verd</styleUrl><Point><coordinates>2.26540446281433,42.0065689086914,0</coordinates></Point></Placemark>
+<Placemark><name>12130</name><description>212130 BRP VIC (Centre)
+posicio de les: 26/04/2019 08:38:03</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.26917028427124,41.9419062137604,0</coordinates></Point></Placemark>
+<Placemark><name>12134</name><description>212134 BFP VIC (Centre)
+posicio de les: 26/04/2019 08:38:41</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.26903080940247,41.9418847560883,0</coordinates></Point></Placemark>
+<Placemark><name>12150</name><description>212150 FSV/FRQ/FER/FRM/FRA/FSA VIC (Centre)
+posicio de les: 26/04/2019 08:41:04</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.26914882659912,41.9419705867767,0</coordinates></Point></Placemark>
+<Placemark><name>12180</name><description>212180 UPCL/USL VIC (Centre)
+posicio de les: 26/04/2019 08:42:32</description><styleUrl>#w_groc</styleUrl><Point><coordinates>2.26897716522217,41.9417774677277,0</coordinates></Point></Placemark>
+<Placemark><name>GD0REG</name><description>220011 P.Tec REGIÓ
+posicio de les: 26/04/2019 08:41:46</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.8066098690033,41.9586861133575,0</coordinates></Point></Placemark>
+<Placemark><name>20076</name><description>220076  REGIÓ
+posicio de les: 26/04/2019 08:42:24</description><styleUrl>#w_verd</styleUrl><Point><coordinates>2.49267339706421,42.1966516971588,0</coordinates></Point></Placemark>
+<Placemark><name>20082</name><description>220082  REGIÓ
+posicio de les: 26/04/2019 08:40:50</description><styleUrl>#w_groc</styleUrl><Point><coordinates>2.80635237693787,41.9602525234222,0</coordinates></Point></Placemark>
+<Placemark><name>20091</name><description>220091  REGIÓ
+posicio de les: 26/04/2019 08:38:48</description><styleUrl>#w_groc</styleUrl><Point><coordinates>2.80656695365906,41.9590079784393,0</coordinates></Point></Placemark>
+<Placemark><name>20099</name><description>220099  REGIÓ
+posicio de les: 26/04/2019 08:39:01</description><styleUrl>#w_groc</styleUrl><Point><coordinates>2.80671715736389,41.9602954387665,0</coordinates></Point></Placemark>
+<Placemark><name>AMER03</name><description>220103 PORT AMER (Girona)
+posicio de les: 26/04/2019 08:41:15</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.5967001914978,42.0108819007874,0</coordinates></Point></Placemark>
+<Placemark><name>20330</name><description>220330 BRP BANY (Girona)
+posicio de les: 26/04/2019 08:42:18</description><styleUrl>#w_verdC</styleUrl><Point><coordinates>2.77446627616882,42.113471031189,0</coordinates></Point></Placemark>
+<Placemark><name>20430</name><description>220430 BRP PERA (Girona)
+posicio de les: 26/04/2019 08:42:33</description><styleUrl>#w_verdC</styleUrl><Point><coordinates>2.98038482666016,42.0263957977295,0</coordinates></Point></Placemark>
+<Placemark><name>PERA56</name><description>220456 PORT.COM PERA (Girona)
+posicio de les: 26/04/2019 08:41:37</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.98354983329773,42.0254194736481,0</coordinates></Point></Placemark>
+<Placemark><name>CASS57</name><description>220857 PORT.COM CASS (Girona)
+posicio de les: 26/04/2019 08:40:28</description><styleUrl>#w_grocP</styleUrl><Point><coordinates>2.88384675979614,41.8795609474182,0</coordinates></Point></Placemark>
+<Placemark><name>20880</name><description>220880 UPCL/USL CASS (Girona)
+posicio de les: 26/04/2019 08:42:25</description><styleUrl>#w_verd</styleUrl><Point><coordinates>2.23918318748474,41.5643906593323,0</coordinates></Point></Placemark>
+<Placemark><name>21030</name><description>221030 BRP FIGU (Girona)
+posicio de les: 26/04/2019 08:41:32</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.97049283981323,42.272139787674,0</coordinates></Point></Placemark>
+<Placemark><name>21091</name><description>221091 UPC FIGU (Girona)
+posicio de les: 26/04/2019 08:42:28</description><styleUrl>#w_verd</styleUrl><Point><coordinates>3.07933688163757,42.2514009475708,0</coordinates></Point></Placemark>
+<Placemark><name>21131</name><description>221131 BRP GIRO (Girona)
+posicio de les: 26/04/2019 08:39:18</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.80621290206909,41.9606387615204,0</coordinates></Point></Placemark>
+<Placemark><name>GIRO56</name><description>221156 PORT.COM GIRO (Girona)
+posicio de les: 26/04/2019 08:38:10</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.80666351318359,41.9600057601929,0</coordinates></Point></Placemark>
+<Placemark><name>HOST05</name><description>221205 PORT HOST (Girona)
+posicio de les: 26/04/2019 08:40:11</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.62463808059692,41.747864484787,0</coordinates></Point></Placemark>
+<Placemark><name>21230</name><description>221230 BRP HOST (Girona)
+posicio de les: 26/04/2019 08:38:39</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.62456297874451,41.7482507228851,0</coordinates></Point></Placemark>
+<Placemark><name>21330</name><description>221330 BRP JONQ (Girona)
+posicio de les: 26/04/2019 08:40:18</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.88236618041992,42.3972272872925,0</coordinates></Point></Placemark>
+<Placemark><name>JONQ56</name><description>221356 PORT.COM JONQ (Girona)
+posicio de les: 26/04/2019 08:42:19</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.88238763809204,42.3973453044891,0</coordinates></Point></Placemark>
+<Placemark><name>LLAN56</name><description>221456 PORT.COM LLAN (Girona)
+posicio de les: 26/04/2019 08:40:21</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>3.15255045890808,42.3579812049866,0</coordinates></Point></Placemark>
+<Placemark><name>21490</name><description>221490 UPC LLAN (Girona)
+posicio de les: 26/04/2019 08:42:25</description><styleUrl>#w_verd</styleUrl><Point><coordinates>2.26134896278381,41.5760314464569,0</coordinates></Point></Placemark>
+<Placemark><name>21560</name><description>221560 AEA/AES/ABA LLOR (Girona)
+posicio de les: 26/04/2019 08:39:22</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.80624508857727,41.9604241847992,0</coordinates></Point></Placemark>
+<Placemark><name>21590</name><description>221590 UPC LLOR (Girona)
+posicio de les: 26/04/2019 08:37:12</description><styleUrl>#w_verd</styleUrl><Point><coordinates>3.07545304298401,41.8522024154663,0</coordinates></Point></Placemark>
+<Placemark><name>21630</name><description>221630 BRP MACA (Girona)
+posicio de les: 26/04/2019 08:42:28</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.75309443473816,41.779557466507,0</coordinates></Point></Placemark>
+<Placemark><name>MAÇA57</name><description>221657 PORT.COM MACA (Girona)
+posicio de les: 26/04/2019 08:41:19</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.75292277336121,41.7794287204742,0</coordinates></Point></Placemark>
+<Placemark><name>OLOT56</name><description>221756 PORT.COM OLOT (Girona)
+posicio de les: 26/04/2019 08:41:45</description><styleUrl>#w_grocP</styleUrl><Point><coordinates>2.47225642204285,42.1917378902435,0</coordinates></Point></Placemark>
+<Placemark><name>21830</name><description>221830 BRP PALA (Girona)
+posicio de les: 26/04/2019 08:40:42</description><styleUrl>#w_verdC</styleUrl><Point><coordinates>3.15650939941406,41.9255769252777,0</coordinates></Point></Placemark>
+<Placemark><name>PALA56</name><description>221856 PORT.COM PALA (Girona)
+posicio de les: 26/04/2019 08:39:20</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>3.15608024597168,41.9256520271301,0</coordinates></Point></Placemark>
+<Placemark><name>PALA57</name><description>221857 PORT.COM PALA (Girona)
+posicio de les: 26/04/2019 08:42:18</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>3.15614461898804,41.9256520271301,0</coordinates></Point></Placemark>
+<Placemark><name>RIPO57</name><description>222157 PORT.COM RIPO (Girona)
+posicio de les: 26/04/2019 08:41:29</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.16838359832764,42.214869260788,0</coordinates></Point></Placemark>
+<Placemark><name>22230</name><description>222230 BRP ROSE (Girona)
+posicio de les: 26/04/2019 08:41:36</description><styleUrl>#w_verdC</styleUrl><Point><coordinates>3.16136956214905,42.276291847229,0</coordinates></Point></Placemark>
+<Placemark><name>ROSE56</name><description>222256 PORT.COM ROSE (Girona)
+posicio de les: 26/04/2019 08:42:00</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>3.16100478172302,42.2764956951141,0</coordinates></Point></Placemark>
+<Placemark><name>SCFA57</name><description>222557 PORT.COM SCFA (Girona)
+posicio de les: 26/04/2019 08:40:00</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.66390562057495,41.8680381774902,0</coordinates></Point></Placemark>
+<Placemark><name>22590</name><description>222590 UPC SCFA (Girona)
+posicio de les: 26/04/2019 08:42:27</description><styleUrl>#w_verd</styleUrl><Point><coordinates>2.312171459198,41.5936481952667,0</coordinates></Point></Placemark>
+<Placemark><name>TORR05</name><description>222605 PORT TORR (Girona)
+posicio de les: 26/04/2019 08:42:26</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>3.16733479499817,42.0479393005371,0</coordinates></Point></Placemark>
+<Placemark><name>22680</name><description>222680 UPCL/USL TORR (Girona)
+posicio de les: 26/04/2019 08:41:35</description><styleUrl>#w_verd</styleUrl><Point><coordinates>3.15625190734863,41.925812959671,0</coordinates></Point></Placemark>
+<Placemark><name>TOSS01</name><description>222701 PORT TOSS (Girona)
+posicio de les: 26/04/2019 08:41:58</description><styleUrl>#w_grocP</styleUrl><Point><coordinates>2.92142987251282,41.7227268218994,0</coordinates></Point></Placemark>
+<Placemark><name>VALL56</name><description>222856 PORT.COM VALL (Girona)
+posicio de les: 26/04/2019 08:42:31</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>3.0317759513855,41.8086218833923,0</coordinates></Point></Placemark>
+<Placemark><name>D2REG</name><description>228042  SERVEIS REGIÓ
+posicio de les: 26/04/2019 08:42:17</description><styleUrl>#w_verd</styleUrl><Point><coordinates>2.80564427375793,41.9601023197174,0</coordinates></Point></Placemark>
+<Placemark><name>D0REL</name><description>230010 P.CG REGIÓ
+posicio de les: 26/04/2019 08:38:44</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>0.605353116989136,41.6237211227417,0</coordinates></Point></Placemark>
+<Placemark><name>30080</name><description>230080  REGIÓ
+posicio de les: 26/04/2019 08:39:49</description><styleUrl>#w_groc</styleUrl><Point><coordinates>2.22787499427795,41.5552711486816,0</coordinates></Point></Placemark>
+<Placemark><name>30082</name><description>230082  REGIÓ
+posicio de les: 26/04/2019 08:41:08</description><styleUrl>#w_verd</styleUrl><Point><coordinates>0.795210599899292,41.7862844467163,0</coordinates></Point></Placemark>
+<Placemark><name>30091</name><description>230091  REGIÓ
+posicio de les: 26/04/2019 08:41:29</description><styleUrl>#w_groc</styleUrl><Point><coordinates>0.605353116989136,41.6233134269714,0</coordinates></Point></Placemark>
+<Placemark><name>30092</name><description>230092  REGIÓ
+posicio de les: 26/04/2019 08:42:09</description><styleUrl>#w_groc</styleUrl><Point><coordinates>0.605417490005493,41.623420715332,0</coordinates></Point></Placemark>
+<Placemark><name>30095</name><description>230095  REGIÓ
+posicio de les: 26/04/2019 08:42:28</description><styleUrl>#w_verd</styleUrl><Point><coordinates>0.977815389633179,41.6384196281433,0</coordinates></Point></Placemark>
+<Placemark><name>30096</name><description>230096  REGIÓ
+posicio de les: 26/04/2019 08:41:45</description><styleUrl>#w_groc</styleUrl><Point><coordinates>0.805574655532837,41.7992234230042,0</coordinates></Point></Placemark>
+<Placemark><name>30099</name><description>230099  REGIÓ
+posicio de les: 26/04/2019 08:42:26</description><styleUrl>#w_verd</styleUrl><Point><coordinates>0.59002161026001,41.6602313518524,0</coordinates></Point></Placemark>
+<Placemark><name>BALA57</name><description>230657 PORT.COM BALA (Lleida)
+posicio de les: 26/04/2019 08:42:21</description><styleUrl>#w_grocP</styleUrl><Point><coordinates>0.805617570877075,41.7992126941681,0</coordinates></Point></Placemark>
+<Placemark><name>30944</name><description>230944 BNP CERV (Lleida)
+posicio de les: 26/04/2019 08:42:23</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>1.26359939575195,41.6716575622559,0</coordinates></Point></Placemark>
+<Placemark><name>CERV57</name><description>230957 PORT.COM CERV (Lleida)
+posicio de les: 26/04/2019 08:42:22</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>1.2644898891449,41.6710031032562,0</coordinates></Point></Placemark>
+<Placemark><name>30990</name><description>230990 UPC CERV (Lleida)
+posicio de les: 26/04/2019 08:39:52</description><styleUrl>#w_groc</styleUrl><Point><coordinates>1.26397490501404,41.6718292236328,0</coordinates></Point></Placemark>
+<Placemark><name>31990</name><description>231990 UPC LLEI (Lleida)
+posicio de les: 26/04/2019 08:42:27</description><styleUrl>#w_verd</styleUrl><Point><coordinates>0.584474802017212,41.6365742683411,0</coordinates></Point></Placemark>
+<Placemark><name>MOLL02</name><description>232002 PORT MOLL (Lleida)
+posicio de les: 26/04/2019 08:41:48</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>0.898164510726929,41.6371214389801,0</coordinates></Point></Placemark>
+<Placemark><name>SEU56</name><description>232956 PORT.COM SEU (Lleida)
+posicio de les: 26/04/2019 08:42:24</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>1.47164225578308,42.3601806163788,0</coordinates></Point></Placemark>
+<Placemark><name>32960</name><description>232960 AEA/AES/ABA SEU (Lleida)
+posicio de les: 26/04/2019 08:38:47</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>1.47232890129089,42.3608994483948,0</coordinates></Point></Placemark>
+<Placemark><name>SORT56</name><description>233056 PORT.COM SORT (Lleida)
+posicio de les: 26/04/2019 08:41:20</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>1.12900614738464,42.4090075492859,0</coordinates></Point></Placemark>
+<Placemark><name>33148</name><description>233148 BUL TAR (Lleida)
+posicio de les: 26/04/2019 08:36:55</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>1.14954113960266,41.6511869430542,0</coordinates></Point></Placemark>
+<Placemark><name>TAR57</name><description>233157 PORT.COM TAR (Lleida)
+posicio de les: 26/04/2019 08:40:44</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>1.14970207214355,41.6512298583984,0</coordinates></Point></Placemark>
+<Placemark><name>33190</name><description>233190 UPC TAR (Lleida)
+posicio de les: 26/04/2019 08:41:37</description><styleUrl>#w_verd</styleUrl><Point><coordinates>1.14910125732422,41.6512191295624,0</coordinates></Point></Placemark>
+<Placemark><name>TREM56</name><description>233356 PORT.COM TREM (Lleida)
+posicio de les: 26/04/2019 08:39:25</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>0.889002084732056,42.1644651889801,0</coordinates></Point></Placemark>
+<Placemark><name>E69REL</name><description>235002 PORT Parc X
+posicio de les: 26/04/2019 08:41:11</description><styleUrl>#w_grocP</styleUrl><Point><coordinates>0.605567693710327,41.623227596283,0</coordinates></Point></Placemark>
+<Placemark><name>SCREL1</name><description>238001 P.COMODIN SERVEIS REGIÓ
+posicio de les: 26/04/2019 08:41:55</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>0.60449481010437,41.6224765777588,0</coordinates></Point></Placemark>
+<Placemark><name>40035</name><description>240035  REGIÓ
+posicio de les: 26/04/2019 08:39:22</description><styleUrl>#w_groc</styleUrl><Point><coordinates>2.23749876022339,41.4650309085846,0</coordinates></Point></Placemark>
+<Placemark><name>40085</name><description>240085  REGIÓ
+posicio de les: 26/04/2019 08:42:32</description><styleUrl>#w_verd</styleUrl><Point><coordinates>2.21559047698975,41.549928188324,0</coordinates></Point></Placemark>
+<Placemark><name>40092</name><description>240092  REGIÓ
+posicio de les: 26/04/2019 08:42:32</description><styleUrl>#w_verd</styleUrl><Point><coordinates>2.41355895996094,41.5473318099976,0</coordinates></Point></Placemark>
+<Placemark><name>40093</name><description>240093  REGIÓ
+posicio de les: 26/04/2019 08:39:36</description><styleUrl>#w_groc</styleUrl><Point><coordinates>2.10403203964233,41.5422248840332,0</coordinates></Point></Placemark>
+<Placemark><name>40094</name><description>240094  REGIÓ
+posicio de les: 26/04/2019 08:41:32</description><styleUrl>#w_verd</styleUrl><Point><coordinates>1.88203096389771,41.6069090366364,0</coordinates></Point></Placemark>
+<Placemark><name>BAD01</name><description>240201 PORT BAD (Metro. Nord)
+posicio de les: 26/04/2019 08:39:24</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.23764896392822,41.4651381969452,0</coordinates></Point></Placemark>
+<Placemark><name>40251</name><description>240251 FSV/FRQ/FER/FRM/FRA/FSA BAD (Metro. Nord)
+posicio de les: 26/04/2019 08:41:16</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.23710179328918,41.4657604694366,0</coordinates></Point></Placemark>
+<Placemark><name>40260</name><description>240260 AEA/AES/ABA BAD (Metro. Nord)
+posicio de les: 26/04/2019 08:40:06</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.23784208297729,41.4652454853058,0</coordinates></Point></Placemark>
+<Placemark><name>CER01</name><description>240501 PORT CER (Metro. Nord)
+posicio de les: 26/04/2019 08:39:20</description><styleUrl>#w_grocP</styleUrl><Point><coordinates>2.10403203964233,41.5420854091644,0</coordinates></Point></Placemark>
+<Placemark><name>40590</name><description>240590 UPC CER (Metro. Nord)
+posicio de les: 26/04/2019 08:39:07</description><styleUrl>#w_groc</styleUrl><Point><coordinates>2.1113920211792,41.5024530887604,0</coordinates></Point></Placemark>
+<Placemark><name>GRA01</name><description>240601 PORT GRA (Metro. Nord)
+posicio de les: 26/04/2019 08:42:18</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.41514682769775,41.5458190441132,0</coordinates></Point></Placemark>
+<Placemark><name>40630</name><description>240630 BRP GRA (Metro. Nord)
+posicio de les: 26/04/2019 08:42:15</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.27526426315308,41.5906763076782,0</coordinates></Point></Placemark>
+<Placemark><name>40640</name><description>240640 BUP GRA (Metro. Nord)
+posicio de les: 26/04/2019 08:39:22</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.27489948272705,41.59064412117,0</coordinates></Point></Placemark>
+<Placemark><name>40650</name><description>240650 FSV/FRQ/FER/FRM/FRA/FSA GRA (Metro. Nord)
+posicio de les: 26/04/2019 08:42:08</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.27522134780884,41.5906763076782,0</coordinates></Point></Placemark>
+<Placemark><name>40660</name><description>240660 AEA/AES/ABA GRA (Metro. Nord)
+posicio de les: 26/04/2019 08:40:53</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.27504968643188,41.59064412117,0</coordinates></Point></Placemark>
+<Placemark><name>40690</name><description>240690 UPC GRA (Metro. Nord)
+posicio de les: 26/04/2019 08:42:30</description><styleUrl>#w_verd</styleUrl><Point><coordinates>2.41354823112488,41.5473532676697,0</coordinates></Point></Placemark>
+<Placemark><name>40691</name><description>240691 UPC GRA (Metro. Nord)
+posicio de les: 26/04/2019 08:39:37</description><styleUrl>#w_groc</styleUrl><Point><coordinates>2.33752369880676,41.5613222122192,0</coordinates></Point></Placemark>
+<Placemark><name>MOL10</name><description>241010 PORT MOL (Metro. Nord)
+posicio de les: 26/04/2019 08:40:20</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.2008490562439,41.5372037887573,0</coordinates></Point></Placemark>
+<Placemark><name>41090</name><description>241090 UPC MOL (Metro. Nord)
+posicio de les: 26/04/2019 08:41:16</description><styleUrl>#w_groc</styleUrl><Point><coordinates>2.11113452911377,41.5021204948425,0</coordinates></Point></Placemark>
+<Placemark><name>RUB10</name><description>241310 PORT RUB (Metro. Nord)
+posicio de les: 26/04/2019 08:40:40</description><styleUrl>#w_grocP</styleUrl><Point><coordinates>2.0353889465332,41.4735388755798,0</coordinates></Point></Placemark>
+<Placemark><name>RUB12</name><description>241312 PORT RUB (Metro. Nord)
+posicio de les: 26/04/2019 08:42:13</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.03457355499268,41.4733672142029,0</coordinates></Point></Placemark>
+<Placemark><name>41340</name><description>241340 BUP RUB (Metro. Nord)
+posicio de les: 26/04/2019 08:41:30</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.03507781028748,41.4736032485962,0</coordinates></Point></Placemark>
+<Placemark><name>41348</name><description>241348 BUL RUB (Metro. Nord)
+posicio de les: 26/04/2019 08:38:36</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.03542113304138,41.473571062088,0</coordinates></Point></Placemark>
+<Placemark><name>41355</name><description>241355 FSV/FRQ/FER/FRM/FRA/FSA RUB (Metro. Nord)
+posicio de les: 26/04/2019 08:39:20</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.03512072563171,41.4735817909241,0</coordinates></Point></Placemark>
+<Placemark><name>SAB11</name><description>241411 PORT SAB (Metro. Nord)
+posicio de les: 26/04/2019 08:42:00</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.10360288619995,41.5422570705414,0</coordinates></Point></Placemark>
+<Placemark><name>41450</name><description>241450 FSV/FRQ/FER/FRM/FRA/FSA SAB (Metro. Nord)
+posicio de les: 26/04/2019 08:38:27</description><styleUrl>#w_verdC</styleUrl><Point><coordinates>2.09915041923523,41.5427935123444,0</coordinates></Point></Placemark>
+<Placemark><name>SAB56</name><description>241456 PORT.COM SAB (Metro. Nord)
+posicio de les: 26/04/2019 08:39:28</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.10404276847839,41.5451323986053,0</coordinates></Point></Placemark>
+<Placemark><name>SCE02</name><description>241602 PORT SCE (Metro. Nord)
+posicio de les: 26/04/2019 08:37:45</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.45678544044495,41.6463696956635,0</coordinates></Point></Placemark>
+<Placemark><name>SCE06</name><description>241606 PORT SCE (Metro. Nord)
+posicio de les: 26/04/2019 08:40:55</description><styleUrl>#w_grocP</styleUrl><Point><coordinates>2.50713586807251,41.6951751708984,0</coordinates></Point></Placemark>
+<Placemark><name>41640</name><description>241640 BUP SCE (Metro. Nord)
+posicio de les: 26/04/2019 08:42:17</description><styleUrl>#w_verdC</styleUrl><Point><coordinates>2.4574613571167,41.6466164588928,0</coordinates></Point></Placemark>
+<Placemark><name>SCG06</name><description>241806 PORT SCG (Metro. Nord)
+posicio de les: 26/04/2019 08:39:17</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.2096574306488,41.4630568027496,0</coordinates></Point></Placemark>
+<Placemark><name>41830</name><description>241830 BRP SCG (Metro. Nord)
+posicio de les: 26/04/2019 08:38:30</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.2092604637146,41.4631319046021,0</coordinates></Point></Placemark>
+<Placemark><name>SCG56</name><description>241856 PORT.COM SCG (Metro. Nord)
+posicio de les: 26/04/2019 08:40:47</description><styleUrl>#w_grocP</styleUrl><Point><coordinates>2.20945358276367,41.4631426334381,0</coordinates></Point></Placemark>
+<Placemark><name>TER02</name><description>242002 PORT TER (Metro. Nord)
+posicio de les: 26/04/2019 08:42:02</description><styleUrl>#w_grocP</styleUrl><Point><coordinates>2.0144248008728,41.5436196327209,0</coordinates></Point></Placemark>
+<Placemark><name>42040</name><description>242040 BUP TER (Metro. Nord)
+posicio de les: 26/04/2019 08:42:21</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.01488614082336,41.5433514118195,0</coordinates></Point></Placemark>
+<Placemark><name>42048</name><description>242048 BUL TER (Metro. Nord)
+posicio de les: 26/04/2019 08:42:20</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>2.01469302177429,41.5434694290161,0</coordinates></Point></Placemark>
+<Placemark><name>50084</name><description>250084  REGIÓ
+posicio de les: 26/04/2019 08:42:30</description><styleUrl>#w_verd</styleUrl><Point><coordinates>2.03472375869751,41.3228845596313,0</coordinates></Point></Placemark>
+<Placemark><name>50086</name><description>250086  REGIÓ
+posicio de les: 26/04/2019 08:41:17</description><styleUrl>#w_groc</styleUrl><Point><coordinates>1.70464038848877,41.354706287384,0</coordinates></Point></Placemark>
+<Placemark><name>50093</name><description>250093  REGIÓ
+posicio de les: 26/04/2019 08:41:53</description><styleUrl>#w_groc</styleUrl><Point><coordinates>2.06785440444946,41.3567876815796,0</coordinates></Point></Placemark>
+<Placemark><name>50097</name><description>250097  REGIÓ
+posicio de les: 26/04/2019 08:41:23</description><styleUrl>#w_verd</styleUrl><Point><coordinates>2.06956028938293,41.3566696643829,0</coordinates></Point></Placemark>
+<Placemark><name>50250</name><description>250250 FSV/FRQ/FER/FRM/FRA/FSA CAP (Metro. Sud)
+posicio de les: 26/04/2019 08:37:56</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>1.61017298698425,41.5892064571381,0</coordinates></Point></Placemark>
+<Placemark><name>50530</name><description>250530 BRP GAV (Metro. Sud)
+posicio de les: 26/04/2019 08:39:36</description><styleUrl>#w_verdC</styleUrl><Point><coordinates>1.98987722396851,41.3000321388245,0</coordinates></Point></Placemark>
+<Placemark><name>50531</name><description>250531 BRP GAV (Metro. Sud)
+posicio de les: 26/04/2019 08:39:34</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>1.99024200439453,41.3000214099884,0</coordinates></Point></Placemark>
+<Placemark><name>GAV56</name><description>250556 PORT.COM GAV (Metro. Sud)
+posicio de les: 26/04/2019 08:41:05</description><styleUrl>#w_grocP</styleUrl><Point><coordinates>1.99030637741089,41.3001394271851,0</coordinates></Point></Placemark>
+<Placemark><name>HOS14</name><description>250714 PORT HOS (Metro. Sud)
+posicio de les: 26/04/2019 08:39:07</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.10610270500183,41.3704347610474,0</coordinates></Point></Placemark>
+<Placemark><name>MAR04</name><description>251004 PORT MAR (Metro. Sud)
+posicio de les: 26/04/2019 08:37:51</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>1.90690040588379,41.4981400966644,0</coordinates></Point></Placemark>
+<Placemark><name>51040</name><description>251040 BUP MAR (Metro. Sud)
+posicio de les: 26/04/2019 08:38:37</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>1.91576242446899,41.4762532711029,0</coordinates></Point></Placemark>
+<Placemark><name>MAR56</name><description>251056 PORT.COM MAR (Metro. Sud)
+posicio de les: 26/04/2019 08:40:52</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>1.91531181335449,41.4768540859222,0</coordinates></Point></Placemark>
+<Placemark><name>51140</name><description>251140 BUP PIE (Metro. Sud)
+posicio de les: 26/04/2019 08:42:23</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>1.70438289642334,41.3547599315643,0</coordinates></Point></Placemark>
+<Placemark><name>PLL56</name><description>251256 PORT.COM PLL (Metro. Sud)
+posicio de les: 26/04/2019 08:41:53</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.08167314529419,41.3172197341919,0</coordinates></Point></Placemark>
+<Placemark><name>SBOI57</name><description>251357 PORT.COM SBOI (Metro. Sud)
+posicio de les: 26/04/2019 08:40:54</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.03487396240234,41.3221657276154,0</coordinates></Point></Placemark>
+<Placemark><name>51530</name><description>251530 BRP SFE (Metro. Sud)
+posicio de les: 26/04/2019 08:42:27</description><styleUrl>#w_verdC</styleUrl><Point><coordinates>2.02920913696289,41.4013230800629,0</coordinates></Point></Placemark>
+<Placemark><name>SFE57</name><description>251557 PORT.COM SFE (Metro. Sud)
+posicio de les: 26/04/2019 08:42:31</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>2.04302787780762,41.3885879516602,0</coordinates></Point></Placemark>
+<Placemark><name>VIF57</name><description>251857 PORT.COM VIF (Metro. Sud)
+posicio de les: 26/04/2019 08:41:13</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>1.70503735542297,41.354523897171,0</coordinates></Point></Placemark>
+<Placemark><name>VIL56</name><description>251956 PORT.COM VIL (Metro. Sud)
+posicio de les: 26/04/2019 08:41:10</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>1.7138671875,41.2198662757874,0</coordinates></Point></Placemark>
+<Placemark><name>D2REMS</name><description>258042  SERVEIS REGIÓ
+posicio de les: 26/04/2019 08:39:32</description><styleUrl>#w_verd</styleUrl><Point><coordinates>2.03399419784546,41.3227128982544,0</coordinates></Point></Placemark>
+<Placemark><name>GARRAF1</name><description>259001 PORT EXTERN REGIÓ
+posicio de les: 26/04/2019 08:42:29</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>1.91483974456787,41.2748515605927,0</coordinates></Point></Placemark>
+<Placemark><name>RET11</name><description>260011 P.Tec REGIÓ
+posicio de les: 26/04/2019 08:39:17</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>1.18629813194275,41.1341750621796,0</coordinates></Point></Placemark>
+<Placemark><name>RET12</name><description>260012 P.Tec REGIÓ
+posicio de les: 26/04/2019 08:40:09</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>1.18760704994202,41.1329519748688,0</coordinates></Point></Placemark>
+<Placemark><name>60082</name><description>260082  REGIÓ
+posicio de les: 26/04/2019 08:42:26</description><styleUrl>#w_verd</styleUrl><Point><coordinates>2.05861687660217,41.4890742301941,0</coordinates></Point></Placemark>
+<Placemark><name>60095</name><description>260095  REGIÓ
+posicio de les: 26/04/2019 08:42:30</description><styleUrl>#w_verd</styleUrl><Point><coordinates>1.05383992195129,41.0856699943542,0</coordinates></Point></Placemark>
+<Placemark><name>60490</name><description>260490 UPC FALS (Tarragona)
+posicio de les: 26/04/2019 08:42:29</description><styleUrl>#w_verd</styleUrl><Point><coordinates>1.1275041103363,41.1317503452301,0</coordinates></Point></Placemark>
+<Placemark><name>HOSP08</name><description>260508 PORT HOSP (Tarragona)
+posicio de les: 26/04/2019 08:41:47</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>0.919686555862427,40.9933912754059,0</coordinates></Point></Placemark>
+<Placemark><name>60848</name><description>260848 BUL REUS (Tarragona)
+posicio de les: 26/04/2019 08:42:18</description><styleUrl>#w_verdC</styleUrl><Point><coordinates>1.13010048866272,41.1485087871552,0</coordinates></Point></Placemark>
+<Placemark><name>60860</name><description>260860 AEA/AES/ABA REUS (Tarragona)
+posicio de les: 26/04/2019 08:37:50</description><styleUrl>#w_verdC</styleUrl><Point><coordinates>1.11886739730835,41.1509549617767,0</coordinates></Point></Placemark>
+<Placemark><name>60890</name><description>260890 UPC REUS (Tarragona)
+posicio de les: 26/04/2019 08:41:40</description><styleUrl>#w_verd</styleUrl><Point><coordinates>1.11227989196777,41.1488842964172,0</coordinates></Point></Placemark>
+<Placemark><name>61250</name><description>261250 FSV/FRQ/FER/FRM/FRA/FSA TARR (Tarragona)
+posicio de les: 26/04/2019 08:39:59</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>1.22123122215271,41.1138224601746,0</coordinates></Point></Placemark>
+<Placemark><name>61290</name><description>261290 UPC TARR (Tarragona)
+posicio de les: 26/04/2019 08:42:19</description><styleUrl>#w_verd</styleUrl><Point><coordinates>1.22892379760742,41.1156356334686,0</coordinates></Point></Placemark>
+<Placemark><name>VALS08</name><description>261308 PORT VALS (Tarragona)
+posicio de les: 26/04/2019 08:42:04</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>1.26080989837646,41.3068127632141,0</coordinates></Point></Placemark>
+<Placemark><name>61330</name><description>261330 BRP VALS (Tarragona)
+posicio de les: 26/04/2019 08:40:59</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>1.26064896583557,41.3069093227386,0</coordinates></Point></Placemark>
+<Placemark><name>61348</name><description>261348 BUL VALS (Tarragona)
+posicio de les: 26/04/2019 08:40:28</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>1.2605094909668,41.306973695755,0</coordinates></Point></Placemark>
+<Placemark><name>61434</name><description>261434 BFP VEND (Tarragona)
+posicio de les: 26/04/2019 08:39:55</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>1.54132604598999,41.2222266197205,0</coordinates></Point></Placemark>
+<Placemark><name>61448</name><description>261448 BUL VEND (Tarragona)
+posicio de les: 26/04/2019 08:41:56</description><styleUrl>#w_verdC</styleUrl><Point><coordinates>1.54071450233459,41.2222802639008,0</coordinates></Point></Placemark>
+<Placemark><name>61460</name><description>261460 AEA/AES/ABA VEND (Tarragona)
+posicio de les: 26/04/2019 08:40:10</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>1.54063940048218,41.2225377559662,0</coordinates></Point></Placemark>
+<Placemark><name>61490</name><description>261490 UPC VEND (Tarragona)
+posicio de les: 26/04/2019 08:42:21</description><styleUrl>#w_verd</styleUrl><Point><coordinates>1.18553638458252,41.1328125,0</coordinates></Point></Placemark>
+<Placemark><name>61590</name><description>261590 UPC VLRD (Tarragona)
+posicio de les: 26/04/2019 08:42:21</description><styleUrl>#w_verd</styleUrl><Point><coordinates>1.25427603721619,41.2784564495087,0</coordinates></Point></Placemark>
+<Placemark><name>TMEC-T01</name><description>268071  SERVEIS REGIÓ
+posicio de les: 26/04/2019 08:41:00</description><styleUrl>#w_verd</styleUrl><Point><coordinates>1.18042945861816,41.1297118663788,0</coordinates></Point></Placemark>
+<Placemark><name>70081</name><description>270081  REGIÓ
+posicio de les: 26/04/2019 08:42:32</description><styleUrl>#w_verd</styleUrl><Point><coordinates>0.560431480407715,40.7659292221069,0</coordinates></Point></Placemark>
+<Placemark><name>70090</name><description>270090  REGIÓ
+posicio de les: 26/04/2019 08:38:56</description><styleUrl>#w_groc</styleUrl><Point><coordinates>0.62497615814209,41.0846507549286,0</coordinates></Point></Placemark>
+<Placemark><name>70093</name><description>270093  REGIÓ
+posicio de les: 26/04/2019 08:42:27</description><styleUrl>#w_verd</styleUrl><Point><coordinates>1.91439986228943,41.4657068252563,0</coordinates></Point></Placemark>
+<Placemark><name>72090</name><description>272090 UPC AMET (Terres de l'Ebre)
+posicio de les: 26/04/2019 08:42:31</description><styleUrl>#w_verd</styleUrl><Point><coordinates>0.593132972717285,40.7156002521515,0</coordinates></Point></Placemark>
+<Placemark><name>AMPO57</name><description>272157 PORT.COM AMPO (Terres de l'Ebre)
+posicio de les: 26/04/2019 08:40:23</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>0.574454069137573,40.7089483737946,0</coordinates></Point></Placemark>
+<Placemark><name>72190</name><description>272190 UPC AMPO (Terres de l'Ebre)
+posicio de les: 26/04/2019 08:41:22</description><styleUrl>#w_groc</styleUrl><Point><coordinates>0.574829578399658,40.7085621356964,0</coordinates></Point></Placemark>
+<Placemark><name>ASCO04</name><description>272204 PORT ASCO (Terres de l'Ebre)
+posicio de les: 26/04/2019 08:42:12</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>0.568639039993286,41.1886131763458,0</coordinates></Point></Placemark>
+<Placemark><name>ASCO08</name><description>272208 PORT ASCO (Terres de l'Ebre)
+posicio de les: 26/04/2019 08:40:25</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>0.568971633911133,41.1877119541168,0</coordinates></Point></Placemark>
+<Placemark><name>GAND56</name><description>272656 PORT.COM GAND (Terres de l'Ebre)
+posicio de les: 26/04/2019 08:40:10</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>0.438058376312256,41.0593843460083,0</coordinates></Point></Placemark>
+<Placemark><name>72690</name><description>272690 UPC GAND (Terres de l'Ebre)
+posicio de les: 26/04/2019 08:42:32</description><styleUrl>#w_verd</styleUrl><Point><coordinates>0.644084215164185,40.970721244812,0</coordinates></Point></Placemark>
+<Placemark><name>MORA04</name><description>272804 PORT MORA (Terres de l'Ebre)
+posicio de les: 26/04/2019 08:41:25</description><styleUrl>#w_grocP</styleUrl><Point><coordinates>0.629750490188599,41.0862171649933,0</coordinates></Point></Placemark>
+<Placemark><name>MORA08</name><description>272808 PORT MORA (Terres de l'Ebre)
+posicio de les: 26/04/2019 08:42:10</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>0.629643201828003,41.0859704017639,0</coordinates></Point></Placemark>
+<Placemark><name>MORA57</name><description>272857 PORT.COM MORA (Terres de l'Ebre)
+posicio de les: 26/04/2019 08:41:45</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>0.629557371139526,41.0859382152557,0</coordinates></Point></Placemark>
+<Placemark><name>72860</name><description>272860 AEA/AES/ABA MORA (Terres de l'Ebre)
+posicio de les: 26/04/2019 08:39:59</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>0.629729032516479,41.0860776901245,0</coordinates></Point></Placemark>
+<Placemark><name>72930</name><description>272930 BRP TIVI (Terres de l'Ebre)
+posicio de les: 26/04/2019 08:37:33</description><styleUrl>#w_grocC</styleUrl><Point><coordinates>0.667279958724976,40.9649813175201,0</coordinates></Point></Placemark>
+<Placemark><name>73031</name><description>273031 BRP TORT (Terres de l'Ebre)
+posicio de les: 26/04/2019 08:41:41</description><styleUrl>#w_verdC</styleUrl><Point><coordinates>0.519908666610718,40.8091127872467,0</coordinates></Point></Placemark>
+<Placemark><name>ULLD02</name><description>273102 PORT ULLD (Terres de l'Ebre)
+posicio de les: 26/04/2019 08:41:38</description><styleUrl>#w_verdP</styleUrl><Point><coordinates>0.358332395553589,40.6084084510803,0</coordinates></Point></Placemark>
+<Placemark><name>ULLD04</name><description>273104 PORT ULLD (Terres de l'Ebre)
+posicio de les: 26/04/2019 08:41:19</description><styleUrl>#w_grocP</styleUrl><Point><coordinates>0.358343124389648,40.6087410449982,0</coordinates></Point></Placemark>
+<Placemark><name>ULLD08</name><description>273108 PORT ULLD (Terres de l'Ebre)
+posicio de les: 26/04/2019 08:38:43</description><styleUrl>#w_grocP</styleUrl><Point><coordinates>0.358225107192993,40.6088161468506,0</coordinates></Point></Placemark>
+</Folder>
+<Folder>
+<name>Descarregues</name>
+</Folder>
+<Style id="w_verdP_n"><IconStyle><color>ff00ff00</color><scale>1.0</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/man.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="w_verdP_s"><IconStyle><color>ff00ff00</color><scale>1.4</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/man.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<StyleMap id="w_verdP"><Pair><key>normal</key><styleUrl>#w_verdP_n</styleUrl></Pair><Pair><key>highlight</key><styleUrl>#w_verdP_s</styleUrl></Pair></StyleMap>
+<Style id="w_verd_n"><IconStyle><color>ff00ff00</color><scale>0.7</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="w_verd_s"><IconStyle><color>ff00ff00</color><scale>1.0</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<StyleMap id="w_verd"><Pair><key>normal</key><styleUrl>#w_verd_n</styleUrl></Pair><Pair><key>highlight</key><styleUrl>#w_verd_s</styleUrl></Pair></StyleMap>
+<Style id="w_verdC_n"><IconStyle><color>ff00ff00</color><scale>1.0</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/truck.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="w_verdC_s"><IconStyle><color>ff00ff00</color><scale>1.4</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/truck.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<StyleMap id="w_verdC"><Pair><key>normal</key><styleUrl>#w_verdC_n</styleUrl></Pair><Pair><key>highlight</key><styleUrl>#w_verdC_s</styleUrl></Pair></StyleMap>
+<Style id="w_verdH_n"><IconStyle><color>ff0000ff</color><scale>1.2</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/heliport.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="w_verdH_s"><IconStyle><color>ff0000ff</color><scale>1.4</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/heliport.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<StyleMap id="w_verdH"><Pair><key>normal</key><styleUrl>#w_verdH_n</styleUrl></Pair><Pair><key>highlight</key><styleUrl>#w_verdH_s</styleUrl></Pair></StyleMap>
+<Style id="w_verdA_n"><IconStyle><color>ff0000ff</color><scale>1.2</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/airports.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="w_verdA_s"><IconStyle><color>ff0000ff</color><scale>1.4</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/airports.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<StyleMap id="w_verdA"><Pair><key>normal</key><styleUrl>#w_verdA_n</styleUrl></Pair><Pair><key>highlight</key><styleUrl>#w_verdA_s</styleUrl></Pair></StyleMap>
+<Style id="w_verdB_n"><IconStyle><color>ff00ff00</color><scale>1.0</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/sailing.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="w_verdB_s"><IconStyle><color>ff00ff00</color><scale>1.4</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/sailing.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<StyleMap id="w_verdB"><Pair><key>normal</key><styleUrl>#w_verdBAR_n</styleUrl></Pair><Pair><key>highlight</key><styleUrl>#w_verdBAR_s</styleUrl></Pair></StyleMap>
+<Style id="w_grocP_n"><IconStyle><color>ff00ffff</color><scale>1.0</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/man.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="w_grocP_s"><IconStyle><color>ff00ffff</color><scale>1.4</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/man.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<StyleMap id="w_grocP"><Pair><key>normal</key><styleUrl>#w_grocP_n</styleUrl></Pair><Pair><key>highlight</key><styleUrl>#w_grocP_s</styleUrl></Pair></StyleMap>
+<Style id="w_groc_n"><IconStyle><color>ff00ffff</color><scale>0.7</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="w_groc_s"><IconStyle><color>ff00ffff</color><scale>1.0</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<StyleMap id="w_groc"><Pair><key>normal</key><styleUrl>#w_groc_n</styleUrl></Pair><Pair><key>highlight</key><styleUrl>#w_groc_s</styleUrl></Pair></StyleMap>
+<Style id="w_grocC_n"><IconStyle><color>ff00ffff</color><scale>1.0</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/truck.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="w_grocC_s"><IconStyle><color>ff00ffff</color><scale>1.4</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/truck.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<StyleMap id="w_grocC"><Pair><key>normal</key><styleUrl>#w_grocC_n</styleUrl></Pair><Pair><key>highlight</key><styleUrl>#w_grocC_s</styleUrl></Pair></StyleMap>
+<Style id="w_grocH_n"><IconStyle><color>ff0000ff</color><scale>1.2</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/heliport.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="w_grocH_s"><IconStyle><color>ff0000ff</color><scale>1.4</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/heliport.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<StyleMap id="w_grocH"><Pair><key>normal</key><styleUrl>#w_grocH_n</styleUrl></Pair><Pair><key>highlight</key><styleUrl>#w_grocH_s</styleUrl></Pair></StyleMap>
+<Style id="w_grocA_n"><IconStyle><color>ff0000ff</color><scale>1.2</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/airports.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="w_grocA_s"><IconStyle><color>ff0000ff</color><scale>1.4</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/airports.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<StyleMap id="w_grocA"><Pair><key>normal</key><styleUrl>#w_grocA_n</styleUrl></Pair><Pair><key>highlight</key><styleUrl>#w_grocA_s</styleUrl></Pair></StyleMap>
+<Style id="w_grocB_n"><IconStyle><color>ff00ffff</color><scale>1.0</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/sailing.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="w_grocB_s"><IconStyle><color>ff00ffff</color><scale>1.4</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/sailing.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<StyleMap id="w_grocB"><Pair><key>normal</key><styleUrl>#w_grocBAR_n</styleUrl></Pair><Pair><key>highlight</key><styleUrl>#w_grocBAR_s</styleUrl></Pair></StyleMap>
+<Style id="w_vermellP_n"><IconStyle><color>ff0000ff</color><scale>1.0</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/man.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="w_vermellP_s"><IconStyle><color>ff0000ff</color><scale>1.4</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/man.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<StyleMap id="w_vermellP"><Pair><key>normal</key><styleUrl>#w_vermellP_n</styleUrl></Pair><Pair><key>highlight</key><styleUrl>#w_vermellP_s</styleUrl></Pair></StyleMap>
+<Style id="w_vermell_n"><IconStyle><color>ff0000ff</color><scale>0.7</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="w_vermell_s"><IconStyle><color>ff0000ff</color><scale>1.0</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<StyleMap id="w_vermell"><Pair><key>normal</key><styleUrl>#w_vermell_n</styleUrl></Pair><Pair><key>highlight</key><styleUrl>#w_vermell_s</styleUrl></Pair></StyleMap>
+<Style id="w_vermellC_n"><IconStyle><color>ff0000ff</color><scale>1.0</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/truck.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="w_vermellC_s"><IconStyle><color>ff0000ff</color><scale>1.4</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/truck.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<StyleMap id="w_vermellC"><Pair><key>normal</key><styleUrl>#w_vermellC_n</styleUrl></Pair><Pair><key>highlight</key><styleUrl>#w_vermellC_s</styleUrl></Pair></StyleMap>
+<Style id="w_vermellH_n"><IconStyle><color>ff0000ff</color><scale>1.2</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/heliport.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="w_vermellH_s"><IconStyle><color>ff0000ff</color><scale>1.4</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/heliport.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<StyleMap id="w_vermellH"><Pair><key>normal</key><styleUrl>#w_vermellH_n</styleUrl></Pair><Pair><key>highlight</key><styleUrl>#w_vermellH_s</styleUrl></Pair></StyleMap>
+<Style id="w_vermellA_n"><IconStyle><color>ff0000ff</color><scale>1.2</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/airports.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="w_vermellA_s"><IconStyle><color>ff0000ff</color><scale>1.4</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/airports.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<StyleMap id="w_vermellA"><Pair><key>normal</key><styleUrl>#w_vermellA_n</styleUrl></Pair><Pair><key>highlight</key><styleUrl>#w_vermellA_s</styleUrl></Pair></StyleMap>
+<Style id="w_vermellB_n"><IconStyle><color>ff0000ff</color><scale>1.0</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/sailing.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<Style id="w_vermellB_s"><IconStyle><color>ff0000ff</color><scale>1.4</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/sailing.png</href></Icon><hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style>
+<StyleMap id="w_vermellB"><Pair><key>normal</key><styleUrl>#w_vermellBAR_n</styleUrl></Pair><Pair><key>highlight</key><styleUrl>#w_vermellBAR_s</styleUrl></Pair></StyleMap>
+<Style id="w_descarrega"><IconStyle><color>ff00ffff</color><scale>0.5</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/road_shield3.png</href></Icon></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style><Style id="actuacio"><IconStyle><color>ff00ffff</color><scale>0.8</scale><Icon><href>http://maps.google.com/mapfiles/kml/shapes/caution.png</href></Icon></IconStyle><LabelStyle><scale>0.7</scale></LabelStyle></Style></Document></kml>

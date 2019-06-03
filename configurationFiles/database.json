@@ -1,0 +1,6 @@
+{
+    "database": "Montserrat2",
+    "user": "postgres",
+    "password": "Montserrat",
+    "host": "localhost"
+}

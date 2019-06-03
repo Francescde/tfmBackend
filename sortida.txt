@@ -1,0 +1,109 @@
+init time
+342.07257199287415
+ * Serving Flask app "index" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+init time
+331.68408012390137
+ImmutableMultiDict([('lat', '41.59358925425937'), ('lon', '1.8003448204938801'), ('vehicles', '1,2,3')])
+solve multimodal
+0.16117572784423828
+fixed point
+32528
+04490
+fixed point
+170876
+10086
+fixed point
+25186
+10090
+fixed point
+11441
+20880
+fixed point
+185754
+21490
+fixed point
+25186
+30080
+fixed point
+56560
+40035
+fixed point
+13025
+40085
+fixed point
+56560
+BAD01
+fixed point
+28287
+40251
+fixed point
+28287
+40260
+fixed point
+42945
+40630
+fixed point
+37709
+40640
+fixed point
+42945
+40650
+fixed point
+42945
+40660
+fixed point
+148847
+MOL10
+fixed point
+160658
+RUB10
+fixed point
+37883
+RUB12
+fixed point
+160658
+41340
+fixed point
+160658
+41348
+fixed point
+160658
+41355
+fixed point
+26110
+SCG06
+fixed point
+26110
+41830
+fixed point
+26110
+SCG56
+fixed point
+43248
+51040
+fixed point
+19855
+MAR56
+fixed point
+61128
+51530
+fixed point
+64331
+60082
+fixed point
+1821
+70093
+time multimodal
+36.44141387939453
+36.279478311538696
+0.00044608116149902344
+1.3930931091308594
+unsolved
+[{'name': 'HOST05', 'coordinates': ['41.747864484787', '2.62463808059692'], 'type': 0, 'point': 185481}, {'name': '21230', 'coordinates': ['41.7482507228851', '2.62456297874451'], 'type': 2, 'point': 185481}, {'name': '21630', 'coordinates': ['41.779557466507', '2.75309443473816'], 'type': 2, 'point': 26784}, {'name': 'MAÇA57', 'coordinates': ['41.7794287204742', '2.75292277336121'], 'type': 0, 'point': 26784}, {'name': 'SCFA57', 'coordinates': ['41.8680381774902', '2.66390562057495'], 'type': 0, 'point': 156628}, {'name': '22590', 'coordinates': ['41.5936481952667', '2.312171459198'], 'type': 3, 'point': 156992}, {'name': '30944', 'coordinates': ['41.6716575622559', '1.26359939575195'], 'type': 2, 'point': 48721}, {'name': 'CERV57', 'coordinates': ['41.6710031032562', '1.2644898891449'], 'type': 0, 'point': 48721}, {'name': '30990', 'coordinates': ['41.6718292236328', '1.26397490501404'], 'type': 3, 'point': 48721}, {'name': '40092', 'coordinates': ['41.5473318099976', '2.41355895996094'], 'type': 3, 'point': 20312}, {'name': 'GRA01', 'coordinates': ['41.5458190441132', '2.41514682769775'], 'type': 0, 'point': 20290}, {'name': '40690', 'coordinates': ['41.5473532676697', '2.41354823112488'], 'type': 3, 'point': 20312}, {'name': '40691', 'coordinates': ['41.5613222122192', '2.33752369880676'], 'type': 3, 'point': 132044}, {'name': 'SCE02', 'coordinates': ['41.6463696956635', '2.45678544044495'], 'type': 0, 'point': 133032}, {'name': 'SCE06', 'coordinates': ['41.6951751708984', '2.50713586807251'], 'type': 0, 'point': 176357}, {'name': '41640', 'coordinates': ['41.6466164588928', '2.4574613571167'], 'type': 2, 'point': 133032}, {'name': '50084', 'coordinates': ['41.3228845596313', '2.03472375869751'], 'type': 3, 'point': 43756}, {'name': '50086', 'coordinates': ['41.354706287384', '1.70464038848877'], 'type': 3, 'point': 18199}, {'name': '50093', 'coordinates': ['41.3567876815796', '2.06785440444946'], 'type': 3, 'point': 161555}, {'name': '50097', 'coordinates': ['41.3566696643829', '2.06956028938293'], 'type': 3, 'point': 29733}, {'name': '50530', 'coordinates': ['41.3000321388245', '1.98987722396851'], 'type': 2, 'point': 5958}, {'name': '50531', 'coordinates': ['41.3000214099884', '1.99024200439453'], 'type': 2, 'point': 170651}, {'name': 'GAV56', 'coordinates': ['41.3001394271851', '1.99030637741089'], 'type': 0, 'point': 170651}, {'name': 'HOS14', 'coordinates': ['41.3704347610474', '2.10610270500183'], 'type': 0, 'point': 46017}, {'name': '51140', 'coordinates': ['41.3547599315643', '1.70438289642334'], 'type': 2, 'point': 18199}, {'name': 'PLL56', 'coordinates': ['41.3172197341919', '2.08167314529419'], 'type': 0, 'point': 146038}, {'name': 'SBOI57', 'coordinates': ['41.3221657276154', '2.03487396240234'], 'type': 0, 'point': 6807}, {'name': 'SFE57', 'coordinates': ['41.3885879516602', '2.04302787780762'], 'type': 0, 'point': 60927}, {'name': 'VIF57', 'coordinates': ['41.354523897171', '1.70503735542297'], 'type': 0, 'point': 20584}, {'name': 'VIL56', 'coordinates': ['41.2198662757874', '1.7138671875'], 'type': 0, 'point': 51545}, {'name': 'D2REMS', 'coordinates': ['41.3227128982544', '2.03399419784546'], 'type': 3, 'point': 40226}, {'name': 'GARRAF1', 'coordinates': ['41.2748515605927', '1.91483974456787'], 'type': 0, 'point': 51853}, {'name': 'VALS08', 'coordinates': ['41.3068127632141', '1.26080989837646'], 'type': 0, 'point': 40078}, {'name': '61330', 'coordinates': ['41.3069093227386', '1.26064896583557'], 'type': 2, 'point': 40078}, {'name': '61348', 'coordinates': ['41.306973695755', '1.2605094909668'], 'type': 2, 'point': 40078}, {'name': '61434', 'coordinates': ['41.2222266197205', '1.54132604598999'], 'type': 2, 'point': 17900}, {'name': '61448', 'coordinates': ['41.2222802639008', '1.54071450233459'], 'type': 2, 'point': 17900}, {'name': '61460', 'coordinates': ['41.2225377559662', '1.54063940048218'], 'type': 2, 'point': 17900}, {'name': '61590', 'coordinates': ['41.2784564495087', '1.25427603721619'], 'type': 3, 'point': 40078}]
+39
+totaltime
+37.83463191986084

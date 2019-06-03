@@ -1,0 +1,7 @@
+Flask==1.0.2
+Flask-Cors==3.0.7
+Flask-RESTful==0.3.7
+GDAL==2.4.0
+geog==0.0.2
+Jinja2==2.10
+psycopg2==2.8.2

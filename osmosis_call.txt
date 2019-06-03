@@ -1,0 +1,10 @@
+osmosis --read-xml mapa.osm --way-key-value keyValueList=highway.residential,highway.track,highway.service,highway.primary,highway.unclassified,highway.motorway,highway.secondary,highway.motorway_link,highway.tertiary,highway.primary_link,highway.secondary_link,highway.tertiary_link --used-node --write-xml output.osm
+
+osmosis --read-xml mapFusionJoined.osm --way-key-value keyValueList=highway.path --used-node --write-xml solsPath.osm
+highway.service,highway.track,highway.motorway,highway.motorway_link,highway.trunk,highway.trunk_link,highway.primary,highway.primary_link,highway.secondary,highway.unclassified,highway.tertiary
+highway.residential,highway.track,highway.service,highway.primary,highway.unclassified,highway.motorway,highway.secondary,highway.motorway_link,highway.tertiary,highway.primary_link,highway.secondary_link,highway.tertiary_link,highway.trunk,highway.trunk_link
+highway.residential,highway.track,highway.service,highway.primary,highway.unclassified,highway.motorway,highway.secondary,highway.motorway_link,highway.tertiary,highway.primary_link,highway.secondary_link,highway.tertiary_link
+
+
+
+osmosis --read-xml map.osm --way-key-value keyValueList=highway.path,highway.motorway,highway.trunk,highway.primary,highway.secondary,highway.tertiary,highway.unclassified,highway.residential,highway.motorway_link,highway.trunk_link,highway.primary_link,highway.secondary_link,highway.tertiary_link,highway.living_street,highway.service,highway.pedestrian,highway.track,highway.road,highway.footway,highway.steps,highway.path --used-node --write-xml outputComplete.osm
