@@ -1,7 +1,7 @@
 from VehiclesHandeler import vehicles
 from MapHandeler import MapHandeler
 from originHandeler import give_origins, giveVehiclesStr
-from EncounterPointHandeler import retriveEncounterPoints
+from EncounterPointHandeler import retriveEncounterPoints, insertPredecesorList, isPredecesorListEmpty
 from pointHandeler import nearestFinalNode, nearestFinalNodes, nearestFinalNodes2
 import time
 
@@ -71,25 +71,29 @@ class RouteHandeler():
         global encPoints
         mapHandeler=MapHandeler()
         self.graphMultimodal, self.graphUnimodal = mapHandeler.read_graph("maps/mapFusionJoinedGRAPH.osm",187767,vehicles)
-        '''
+
         #agafa punts de trobada i crea llista fins a ells
         timeToreadPoints=time.time()
+        #if(isPredecesorListEmpty()):
         encPoints = retriveEncounterPoints()
         encPoints=nearestFinalNodes2(encPoints)
         #borra totes les llistes de precedencies de bd
         for enc in encPoints:
+            timeTostorePredecesors=time.time()
+            predecesorList={}
             for vehicle in [0,1,2,3]:
                 self.graphUnimodal.solve(enc['point'], vehicle)
                 #obte la llista de precedencies
-                predecesorList=self.graphUnimodal.getAllPredecesors(vehicle)
+                predecesorList[vehicle]=self.graphUnimodal.getAllPredecesors(vehicle,enc['point'])
                 #guardala a bd
-            print("predecesor list lenght")
+            #insertPredecesorList(predecesorList,enc['point'])
+            print(time.time()-timeTostorePredecesors,"time to store predecesors")
             print(len(predecesorList))
             #Per cada LLista s'incerta
-        #print(predecesorList)
+            #print(predecesorList)
         print("time to read encounter points")
         print(time.time() - timeToreadPoints)
-        '''
+
         self.addEndsFromFile('vehicles/DARRERES_POSICIONS.kml')
 
     def addEndsFromFile(self,file):

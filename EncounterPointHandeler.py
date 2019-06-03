@@ -31,4 +31,43 @@ def retriveEncounterPoints():
 
     return points
 
+def isPredecesorListEmpty():
+    conn = psycopg2.connect(database=configuration_data["database"], user=configuration_data["user"],
+                            password=configuration_data["password"], host=configuration_data["host"])
+
+    cursorEnconterPoints = conn.cursor()
+    cursorEnconterPoints.execute("Select count(*) from predecesorList;")
+    value=cursorEnconterPoints.fetchone()
+    print(value[0])
+    return value[0]==0
+
+def insertPredecesorList(predecesors,final):
+
+    conn = psycopg2.connect(database=configuration_data["database"], user=configuration_data["user"],
+                            password=configuration_data["password"], host=configuration_data["host"])
+    query="Insert into predecesorList values "
+    first=True
+    for el in predecesors:
+        if(not first):
+            query +=","
+        first=False
+        query+="("+str(final)+"," \
+                + str(el["from"])+"," \
+                + str(el["to"])+"," \
+                + str(el["vehicle"])+"," \
+                + str(el["posRamp"])+"," \
+                + str(el["negRamp"])+"," \
+                + str(el["dist"])+"," \
+                + str(el["cost"])+"," \
+                + str(el["costu"]["walk"])+"," \
+                + str(el["costu"]["car"])+"," \
+                + str(el["costu"]["BRP"])+"," \
+                + str(el["costu"]["4x4"])+")"
+    query +=";"
+
+    cursorEnconterPoints = conn.cursor()
+    cursorEnconterPoints.execute(query)
+    conn.commit()
+
+
 #print(len(retriveEncounterPoints()))

@@ -128,7 +128,7 @@ class routerc():
         for end in self.nodes.keys():
             predecesorv=self.myrouter.findPredecesor(end, vehicle)
             ownkey, key, vehicleUse = predecesorv[0],predecesorv[1],predecesorv[2]
-            if(ownkey>0):
+            if(ownkey>=0):
                 values = self.myrouter.findPredecesorValues(end, vehicle)
                 rampPos, rampNeg, dist, cost = values[0],values[1],values[2],values[3]
                 if(values[4+vehicle]<9999):
@@ -148,6 +148,19 @@ class routerc():
                         }
                     }
                     predecesors.append(obj)
+        return predecesors
+
+    def getAllPredecesors(self,vehicle,final):
+        predecesors = {}
+        for end in self.nodes.keys():
+            predecesorv=self.myrouter.findPredecesor(end, vehicle)
+            ownkey, key, vehicleUse = predecesorv[0],predecesorv[1],predecesorv[2]
+            if(ownkey>=0):
+                predecesors[end]=[ownkey]
+                while( final != self.nodes[ownkey]["key"]):
+                    predecesorv=self.myrouter.findPredecesor(end, vehicle)
+                    ownkey, key, vehicleUse = predecesorv[0],predecesorv[1],predecesorv[2]
+                    predecesors[end].append(ownkey)
         return predecesors
 
 

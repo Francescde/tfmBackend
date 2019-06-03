@@ -170,12 +170,34 @@ create or replace view all_nodes as select osmp.id as id,
 	from public.way_point wp,public.planet_osm_nodes osmp
 	where wp.id_node=osmp.id;
 
+Drop table temp_vehiclePositions;
 Create table temp_vehiclePositions (
 	  id_v int,
 	  geom geometry);
+
+Drop table graph_nodes_geometry;
 Create table graph_nodes_geometry (
 	  id bigint,
 	  geom geometry);
+CREATE INDEX graph_nodes_geometry_gix ON graph_nodes_geometry USING GIST (geom);
+
+Drop table predecesorList;
+Create table predecesorList (
+	  finalNode bigint,
+	  fromNode bigint,
+	  toNode bigint,
+	  vehicle smallint,
+	  posRamp float,
+	  negRamp float,
+	  dist float,
+	  costg float,
+	  costWalk float,
+	  costCar float,
+	  costBrp float,
+	  cost4x4 float,
+	  primary key (finalNode, fromNode, vehicle));
+CREATE INDEX BTreeOnPredecesorList ON predecesorList USING btree (finalNode, vehicle, fromNode);
+CREATE INDEX BTreeOnPredecesorList2 ON predecesorList USING btree (finalNode, vehicle, toNode);
 --fusiona
 
 --select COUNT(id_node) from public.way_point where is_limit  group by id_node ORDER BY COUNT(id_node) DESC;

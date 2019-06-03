@@ -479,6 +479,7 @@ void inizializeGraph(int V){
 
     for(int i =0; i<numNode;++i){
         pred[i].final=false;
+        pred[i].pred[0]=pred[i].pred[1]=pred[i].pred[2]=pred[i].pred[3]=-1;
     }
     globalGraph = createGraph(V);
 }
