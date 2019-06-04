@@ -132,3 +132,43 @@ create or replace view final_nodes as select osmp.id as id,
 	from public.way_point wp, public.planet_osm_nodes osmp
 	where is_limit is true and id_node=osmp.id;
 
+
+----------
+with recursive name_tree as (
+   select fromNode, toNode, finalNode, vehicle
+   from predecesorList
+   where fromNode = 2278830907 and finalNode=1909600474 and vehicle=2
+   union all
+   select c.fromNode, c.toNode, c.finalNode, c.vehicle
+   from predecesorList c
+   join name_tree p ON p.toNode = c.fromNode
+						and p.finalNode=c.finalNode
+						and p.vehicle=c.vehicle  -- this is the recursion
+)
+select *
+from name_tree;
+
+select count(*) from predecesorList;
+
+
+select fromNode, toNode, finalNode, vehicle
+   from predecesorList
+   where  finalNode=1909600474 and vehicle=2
+delete from predecesorList;
+WITH RECURSIVE pops (fromNode, level, finalNode, vehicle, node_path) AS (
+    SELECT  fromNode, 0, finalNode, vehicle, ARRAY[toNode]
+    FROM    predecesorList
+    WHERE   toNode = finalNode
+    UNION ALL
+    SELECT  p.fromNode, t0.level + 1, p.finalNode, p.vehicle, ARRAY_APPEND(t0.node_path, p.fromNode)
+    FROM predecesorList p
+    INNER JOIN pops t0 ON t0.fromNode = p.toNode
+						and t0.finalNode=p.finalNode
+						and t0.vehicle=p.vehicle
+)
+SELECT  fromNode, level,finalNode, vehicle, node_path
+FROM  pops
+
+
+
+

@@ -273,6 +273,7 @@ void dijkstra(struct Graph* graph, int src, int vehicle)
         dist[v]= INT_MAX;
         minHeap->array[v] = newMinHeapNode(v, dist[v]);
         minHeap->pos[v] = v;
+        pred[v].pred[vehicle]=-1;
     }
 
     // Make dist value of src vertex as 0 so that it is extracted first

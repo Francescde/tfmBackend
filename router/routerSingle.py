@@ -150,6 +150,22 @@ class routerc():
                     predecesors.append(obj)
         return predecesors
 
+    def getUnexplored(self,start):
+        predecesors={}
+        for vehicle in [0,1,2,3]:
+            self.solve(start, vehicle)
+            predecesors[vehicle] = []
+            for end in self.nodes.keys():
+                predecesorv=self.myrouter.findPredecesor(end, vehicle)
+                ownkey, key, vehicleUse = predecesorv[0],predecesorv[1],predecesorv[2]
+                if(ownkey<0 and not self.nodes[end]["key"]==start):
+                    predecesors[vehicle].append(self.nodes[end]["key"])
+        predecesorsList=[]
+        for pre in predecesors[0]:
+            if (pre in predecesors[1] and pre in predecesors[2] and pre in predecesors[3]):
+                predecesorsList.append(pre)
+        return predecesorsList
+
     def getAllPredecesors(self,vehicle,final):
         predecesors = {}
         for end in self.nodes.keys():
@@ -166,7 +182,11 @@ class routerc():
 
     def getRoute(self,end,start,vehicle):
         vehiclesSTR=['walk','car','BRP','4x4']
+        #print('predecesor')
+        predecesor = self.myrouter.findPredecesor(self.nodesInv[end], vehicle)
+        #print(end,predecesor[0],predecesor[1],predecesor[2])
         values = self.myrouter.findPredecesorValues(self.nodesInv[end], vehicle)
+        #print('data found')
         #print(str(predecesor[0])+" "+str(predecesor[1])+" "+str(predecesor[2]))
         rampPos, rampNeg, dist, cost = values[0],values[1],values[2],values[3]
         route = [{

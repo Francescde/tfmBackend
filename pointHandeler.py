@@ -71,6 +71,17 @@ def nearestFinalNodes(nodes):
     return ends
 
 
+def removeUnexploredNodes(unexploredNodes):
+    if(len(unexploredNodes)>0):
+        conn = psycopg2.connect(database=configuration_data["database"], user=configuration_data["user"],
+                                password=configuration_data["password"], host=configuration_data["host"])
+        cursorpointsToGet = conn.cursor()
+        cursorpointsToGet.execute("Delete from graph_nodes_geometry fi where fi.id IN "+str(tuple(unexploredNodes))+";")
+        conn.commit()
+    else:
+        print("----------------empty-------------------")
+
+
 def nearestFinalNodes2(nodes):
     ends=[]
     initTime=time.time()

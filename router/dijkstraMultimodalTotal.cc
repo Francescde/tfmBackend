@@ -82,6 +82,7 @@ struct Graph* createGraph(int V)
         final[i]=false;
         vehicles[i][0]=vehicles[i][1]=vehicles[i][2]=0;
         pred[i].visited=false;
+        pred[i].pred=-1;
     }
     return graph;
 }

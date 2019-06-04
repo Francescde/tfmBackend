@@ -2,7 +2,7 @@ from VehiclesHandeler import vehicles
 from MapHandeler import MapHandeler
 from originHandeler import give_origins, giveVehiclesStr
 from EncounterPointHandeler import retriveEncounterPoints, insertPredecesorList, isPredecesorListEmpty
-from pointHandeler import nearestFinalNode, nearestFinalNodes, nearestFinalNodes2
+from pointHandeler import nearestFinalNode, nearestFinalNodes, nearestFinalNodes2, removeUnexploredNodes
 import time
 
 def min_route_walking(routes):
@@ -73,6 +73,33 @@ class RouteHandeler():
         self.graphMultimodal, self.graphUnimodal = mapHandeler.read_graph("maps/mapFusionJoinedGRAPH.osm",187767,vehicles)
 
         #agafa punts de trobada i crea llista fins a ells
+        encPoints = retriveEncounterPoints()
+        encPoints = nearestFinalNodes2(encPoints)
+        # borra totes les llistes de precedencies de bd
+        #for enc in encPoints:
+        enc=encPoints[0]
+        timeTostorePredecesors = time.time()
+        # obte la llista de precedencies
+        unexploredList = self.graphUnimodal.getUnexplored(enc['point'])
+        removeUnexploredNodes(unexploredList)
+        # guardala a bd
+        # insertPredecesorList(predecesorList,enc['point'])
+        print(time.time() - timeTostorePredecesors, "time to store predecesors")
+        print(len(unexploredList))
+        # Per cada LLista s'incerta
+        # print(predecesorList)
+
+
+
+        timeToreadPoints=time.time()
+        encPoints = retriveEncounterPoints()
+        #nodes en el graf de vehicles
+        encPoints = nearestFinalNodes2(encPoints)
+        #nodes en el graf multimodal
+        for end in encPoints:
+            end['encounter']=self.graphMultimodal.getNearestNode(end["coordinates"][0],end["coordinates"][1])
+        print("time to read encounter points")
+        print(time.time() - timeToreadPoints)
         '''
         timeToreadPoints=time.time()
         if(isPredecesorListEmpty()):
@@ -99,7 +126,7 @@ class RouteHandeler():
         self.addEndsFromFile('vehicles/DARRERES_POSICIONS.kml')
 
     def addEndsFromFile(self,file):
-
+        global ends
         timeToreadPoints=time.time()
         finals = give_origins(file)
         ends=nearestFinalNodes2(finals)
@@ -142,11 +169,12 @@ class RouteHandeler():
 
     def getRoutesWithMandatory(self,lat,lon,vehicles):
         global ends
-        #global encPoints
+        global encPoints
+        maxPoints=3
         start = self.graphMultimodal.getNearestNode(lat, lon)
         #-123204
         #[-131168, -102262, -124744, -157746]#[-143102, -170904, -107948, -81882, -44288, -50156,-123204]
-        endsPointList=[end['point'] for end in ends]
+        endsPointList=[end['encounter'] for end in encPoints]
         timeStartMultimodal=time.time()
         timegloablalMultimodal=time.time()
         self.graphMultimodal.solve(start, endsPointList)
@@ -154,19 +182,67 @@ class RouteHandeler():
         print(time.time()-timeStartMultimodal)
         vehiclesSTR=giveVehiclesStr()
         routes = {}
-        unsolvingEnds=[]
         meetingPoints={}
         routeSel={}
         timePoints=0
         timeGetRoutes=0
-        for end in ends:
-            solved=True
+        #for end in ends:
+        encPointsToExplore=[]
+        for end in encPoints:
+            pred=self.graphMultimodal.findPredecesor(self.graphMultimodal.nodesInv[end['encounter']], 1)
+            if (pred[0] >= 0 and end != start):
+                values = self.graphMultimodal.myrouter.findPredecesorValues(self.graphMultimodal.nodesInv[end['encounter']], 1)
+                end["value"]=values[3]
+                encPointsToExplore.append(end)
+        encPointsToExplore = sorted(encPointsToExplore, key=lambda k: k['value'])
+        #print(encPointsToExplore)
+        #print('-----------------------------------------------------------------')
+        encPointsToExplore=[encPointsToExplore[i] for i in range(0,min(maxPoints,len(encPointsToExplore)))]
+        encPointsDic={}
+        for end in encPointsToExplore:
             timeStartGetRoutes=time.time()
-            routeSolved, maxCar, maxBRP, max4x4 =self.graphMultimodal.getRoute(end['point'], start)
+            routeSolved, maxCar, maxBRP, max4x4 =self.graphMultimodal.getRoute(end['encounter'], start)
             if(len(routeSolved)>0):
+                encPointsDic[str(end['name'])]=end
                 route_name=str(end['name'])
                 routes[route_name] = routeSolved
-            else:
+                ''''''
+                timeGetRoutes = timeGetRoutes + (time.time() - timeStartGetRoutes)
+                timeStarPoints = time.time()
+                vahiclesPos = [maxCar, maxBRP, max4x4]
+                pos = max(vahiclesPos)
+                sel = {
+                    'points': routeSolved,
+                    'routeName': route_name,
+                    'changePoint': pos,
+                    'subrutes': {}
+                }
+                routeSel[route_name] = sel
+                if pos >= 0:
+                    # print(route_name)
+                    for vehicle in vehicles:
+                        if (end['type'] == -1 or end['type'] == vehicle):
+                            pos2 = vahiclesPos[vehicle - 1]
+                            routeSolved[pos2]['limitVehicle'] = vehiclesSTR[vehicle]
+                            if (end['name'] not in meetingPoints.keys()):
+                                obj = {
+                                    'route': route_name,
+                                    'vehicle': vehicle
+                                }
+                                meetingPoints[end['name']] = {}
+                                meetingPoints[end['name']]['points'] = [obj]
+                                meetingPoints[end['name']]['vehicles'] = [vehicle]
+                            else:
+                                obj = {
+                                    'route': route_name,
+                                    'vehicle': vehicle
+                                }
+                                meetingPoints[end['name']]['points'].append(obj)
+                                if vehicle not in meetingPoints[end['name']]['vehicles']:
+                                    meetingPoints[end['name']]['vehicles'].append(vehicle)
+                timePoints = timePoints + (time.time() - timeStarPoints)
+                '''
+            else
                 newpoint=self.graphMultimodal.getNearestNodeSolved(end['coordinates'][0], end['coordinates'][1])
                 if(newpoint is not None):
                     end['point'] = newpoint
@@ -214,6 +290,7 @@ class RouteHandeler():
             i=1
             timePoints=timePoints+(time.time()-timeStarPoints)
         ends = [elemnt for elemnt in ends if elemnt not in unsolvingEnds]
+        '''
         print('time multimodal')
         print(time.time()-timegloablalMultimodal)
         print(timeGetRoutes)
@@ -222,6 +299,8 @@ class RouteHandeler():
         timegloablaUnimodals=time.time()
         selSubrutes={}
         meetingPoints2={}
+        #print(meetingPoints.keys())
+        #print('------------------------------')
         for meetPoint in meetingPoints.keys():
             subroutes={}
             meetPoint2={
@@ -229,7 +308,10 @@ class RouteHandeler():
                 'points':[]
             }
             for vehicle in meetingPoints[meetPoint]['vehicles']:
-                self.graphUnimodal.solve(meetPoint, vehicle)
+                #print(meetingPoints[meetPoint]['vehicles'])
+                #print(encPointsDic[meetPoint])
+                self.graphUnimodal.solve(encPointsDic[meetPoint]['point'], vehicle)
+                #print('solved')
                 for end in ends:
                     if(end['type']==-1 or end['type']==vehicle):
                         obj = {
@@ -238,18 +320,19 @@ class RouteHandeler():
                         }
                         meetPoint2['points'].append(obj)
                         sub_route_name=str(end['name'])+'_'+vehiclesSTR[vehicle]
-                        subroute = self.graphUnimodal.getRoute(end['point'],meetPoint,vehicle)
+                        #print(end['point'])
+                        subroute = self.graphUnimodal.getRoute(end['point'],encPointsDic[meetPoint]['point'],vehicle)
+                        #print('solved',len(subroute))
                         if(len(subroute)>0):
                             R2dist = subroute[0]['cost']
                             route2dist = R2dist
                             ##print(routes2)
-                            if (len(subroute) > 0):
-                                sel = {
-                                    'points': subroute,
-                                    'changePoint': pos2,
-                                    'routeName': route_name,
-                                }
-                                subroutes[sub_route_name] = sel
+                            sel = {
+                                'points': subroute,
+                                'changePoint': pos2,
+                                'routeName': route_name,
+                            }
+                            subroutes[sub_route_name] = sel
             selSubrutes[meetPoint]=subroutes
             meetingPoints2[meetPoint]=meetPoint2
             '''
