@@ -170,7 +170,7 @@ class RouteHandeler():
     def getRoutesWithMandatory(self,lat,lon,vehicles):
         global ends
         global encPoints
-        maxPoints=3
+        maxPoints=5
         start = self.graphMultimodal.getNearestNode(lat, lon)
         #-123204
         #[-131168, -102262, -124744, -157746]#[-143102, -170904, -107948, -81882, -44288, -50156,-123204]
