@@ -1,4 +1,4 @@
-from kmlHandeler import extractPlacemarks, getVehicleNameList
+from RouteSelector.kmlHandeler import extractPlacemarks, getVehicleNameList
 
 def giveVehiclesStr():
     return getVehicleNameList()

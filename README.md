@@ -16,12 +16,19 @@ Instalar amb:
 pip install -r requirements.txt
 ```
 #### Posar a punt la base de dades:
-generar una bd per configurar la connexio es fa al fitxer **database.json** de **configurationFiles**
+Generar una bd per configurar la connexio es fa al fitxer **database.json** de **configurationFiles**
 
-Executar el fitxer **sqlFiles/inserta_taules.sql**
-depositar via **osm2psql** la cartografia necesaria a la bd (amb la opcio --slim)
-depositar la cartografia de bombers a la bd jo he empreat **Qgis**
-executar el script **storegraphToDB.py**
+  Executar el fitxer **utils/sqlFiles/inserta_taules.sql**
+
+  Depositar via **osm2psql** la cartografia necesaria a la bd (amb la opcio --slim)
+
+  Depositar la cartografia de bombers a la bd jo he empreat **Qgis**
+
+  Extreure el osm amb els tags necesaris de la cartografia de bombers amb l'sipt **DB2OSMpaths** de **Utils/ShapeBD2OSM**
+
+  Depositar via **osm2psql** la cartografia de bombers a la bd (amb la opcio --slim i el prefix coe)
+
+  Executar el script **storegraphToDB.py**
 
 #### Compilar les llibreries de explirar en c:
 Dins de router executar 

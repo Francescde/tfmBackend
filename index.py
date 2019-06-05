@@ -3,9 +3,8 @@ import os
 from flask import Flask,request
 from flask_restful import Resource, Api
 from flask_restful.utils import cors
-from RouteHandeler import RouteHandeler
+from RouteSelector.RouteHandeler import RouteHandeler
 import json
-from flask.views import MethodView
 import logging
 import time
 logging.getLogger('flask_cors').level = logging.DEBUG
@@ -32,7 +31,7 @@ with open('configurationFiles/flaskConfig.json') as json_file:
 #not app.debug or
 if  os.environ.get("WERKZEUG_RUN_MAIN") == "true" or configuration_data["debug"] is False:
     timer=time.time()
-    routeHandeler=RouteHandeler()
+    routeHandeler=RouteHandeler(vehiclesFile='configurationFiles/vehicles/DARRERES_POSICIONS.kml')
     print('init time')
     print(time.time()-timer)
 

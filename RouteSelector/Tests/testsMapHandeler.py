@@ -1,8 +1,8 @@
 import unittest
 import os
-import copy
+
 os.chdir('..')
-from MapHandeler import MapHandeler
+from RouteSelector.MapHandeler import MapHandeler
 
 def getGraphKeys( graph, end, start, vehicle):
     route = [end]
@@ -27,7 +27,7 @@ def getVehicles( graph, end, start, vehicle):
 class TestStringMethods(unittest.TestCase):
 
     def test_readGraff(self):
-        from Tests.FakesVehicles.FakeVehicles import vehicles
+        from RouteSelector.Tests.FakesVehicles.FakeVehicles import vehicles
         mapHandeler=MapHandeler()
         graph = mapHandeler.read_graph("maps/connexioGRAPH2.osm", 3007, vehicles)
         start=graph.getNearestNode('41.60448710003', '1.84747999968')
@@ -40,7 +40,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertTrue(True)
 
     def test_if_sum_larger_than_direct_root_take_sum_of_nodes(self):
-        from Tests.FakesVehicles.FakeVehiclesJustWalking import vehicles
+        from RouteSelector.Tests.FakesVehicles.FakeVehiclesJustWalking import vehicles
         mapHandeler=MapHandeler()
         graph = mapHandeler.read_graph("Tests/maps/simpleGraf.osm", 7, vehicles)
         start = -26176
@@ -56,7 +56,7 @@ class TestStringMethods(unittest.TestCase):
             k=k+1
 
     def test_if_sum_larger_than_direct_root_take_direct_root(self):
-        from Tests.FakesVehicles.FakeVehiclesJustWalking import vehicles
+        from RouteSelector.Tests.FakesVehicles.FakeVehiclesJustWalking import vehicles
         mapHandeler=MapHandeler()
         graph = mapHandeler.read_graph("Tests/maps/simpleGraf2.osm", 7, vehicles)
         start = -26176
@@ -72,7 +72,7 @@ class TestStringMethods(unittest.TestCase):
             k=k+1
 
     def test_if_route_car_is_better_take_car(self):
-        from Tests.FakesVehicles.FakeVehicles import vehicles
+        from RouteSelector.Tests.FakesVehicles.FakeVehicles import vehicles
         mapHandeler=MapHandeler()
         graph = mapHandeler.read_graph("Tests/maps/simpleGraf3.osm", 7, vehicles)
         start = -26176
@@ -92,7 +92,7 @@ class TestStringMethods(unittest.TestCase):
 
 
     def test_if_route_walk_is_better_walk(self):
-        from Tests.FakesVehicles.FakeVehicles import vehicles
+        from RouteSelector.Tests.FakesVehicles.FakeVehicles import vehicles
         mapHandeler=MapHandeler()
         graph = mapHandeler.read_graph("Tests/maps/simpleGraf4.osm", 7, vehicles)
         start = -26176
@@ -109,7 +109,7 @@ class TestStringMethods(unittest.TestCase):
 
 
     def test_if_you_leaveTheCar_you_cant_take_it_again(self):
-        from Tests.FakesVehicles.FakeVehicles import vehicles
+        from RouteSelector.Tests.FakesVehicles.FakeVehicles import vehicles
         mapHandeler=MapHandeler()
         graph = mapHandeler.read_graph("Tests/maps/simpleGraf5.osm", 7, vehicles)
         start = -26176
@@ -122,7 +122,7 @@ class TestStringMethods(unittest.TestCase):
 
 
     def test_if_you_leaveTheCar_you_can_take_it_again_if_car_is_allowed(self):
-        from Tests.FakesVehicles.FakeVehicles import vehicles
+        from RouteSelector.Tests.FakesVehicles.FakeVehicles import vehicles
         mapHandeler=MapHandeler()
         graph = mapHandeler.read_graph("Tests/maps/simpleGraf5.osm", 7, vehicles)
         start = -26176
@@ -135,7 +135,7 @@ class TestStringMethods(unittest.TestCase):
 
 
     def test_if_you_leaveTheCar_you_can_take_it_again_if_BRP_is_allowed(self):
-        from Tests.FakesVehicles.FakeVehicles import vehicles
+        from RouteSelector.Tests.FakesVehicles.FakeVehicles import vehicles
         mapHandeler=MapHandeler()
         graph = mapHandeler.read_graph("Tests/maps/simpleGraf5.osm", 7, vehicles)
         start = -26176
@@ -150,7 +150,7 @@ class TestStringMethods(unittest.TestCase):
 
 
     def test_if_you_leaveTheCar_you_can_take_it_again_if_4x4_is_allowed(self):
-        from Tests.FakesVehicles.FakeVehicles import vehicles
+        from RouteSelector.Tests.FakesVehicles.FakeVehicles import vehicles
         mapHandeler=MapHandeler()
         graph = mapHandeler.read_graph("Tests/maps/simpleGraf5.osm", 7, vehicles)
         graph.addVehicle(3,-26178)
@@ -165,7 +165,7 @@ class TestStringMethods(unittest.TestCase):
 
 
     def test_if_you_leaveTheCar_if_you_must_pass_oneway_restricted_path(self):
-        from Tests.FakesVehicles.FakeVehicles import vehicles
+        from RouteSelector.Tests.FakesVehicles.FakeVehicles import vehicles
         mapHandeler=MapHandeler()
         graph = mapHandeler.read_graph("Tests/maps/simpleGraf7.osm", 7, vehicles)
         start = -26176
@@ -180,7 +180,7 @@ class TestStringMethods(unittest.TestCase):
 
 
     def test_if_you_leaveTheCar_if_you_must_pass_oneway_restricted_path2(self):
-        from Tests.FakesVehicles.FakeVehicles import vehicles
+        from RouteSelector.Tests.FakesVehicles.FakeVehicles import vehicles
         mapHandeler=MapHandeler()
         graph = mapHandeler.read_graph("Tests/maps/simpleGraf7.osm", 7, vehicles)
         start = -26176
@@ -193,7 +193,7 @@ class TestStringMethods(unittest.TestCase):
 
 
     def test_if_you_dont_leave_Car_if_you_must_pass_oneway_opiste_restricted_path(self):
-        from Tests.FakesVehicles.FakeVehicles import vehicles
+        from RouteSelector.Tests.FakesVehicles.FakeVehicles import vehicles
         mapHandeler=MapHandeler()
         graph = mapHandeler.read_graph("Tests/maps/simpleGraf7.osm", 7, vehicles)
         start = -26182

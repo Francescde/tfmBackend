@@ -1,8 +1,8 @@
-from VehiclesHandeler import vehicles
-from MapHandeler import MapHandeler
-from originHandeler import give_origins, giveVehiclesStr
-from EncounterPointHandeler import retriveEncounterPoints, insertPredecesorList, isPredecesorListEmpty
-from pointHandeler import nearestFinalNode, nearestFinalNodes, nearestFinalNodes2, removeUnexploredNodes
+from RouteSelector.VehiclesHandeler import vehicles
+from RouteSelector.MapHandeler import MapHandeler
+from RouteSelector.originHandeler import give_origins, giveVehiclesStr
+from RouteSelector.EncounterPointHandeler import retriveEncounterPoints
+from RouteSelector.pointHandeler import nearestFinalNodes2, removeUnexploredNodes
 import time
 
 def min_route_walking(routes):
@@ -66,7 +66,7 @@ def min_route(routes):
 
 class RouteHandeler():
 
-    def __init__(self):
+    def __init__(self,vehiclesFile=None):
         global ends
         global encPoints
         mapHandeler=MapHandeler()
@@ -122,8 +122,8 @@ class RouteHandeler():
         print("time to read encounter points")
         print(time.time() - timeToreadPoints)
         '''
-
-        self.addEndsFromFile('vehicles/DARRERES_POSICIONS.kml')
+        if(vehiclesFile!=None):
+            self.addEndsFromFile(vehiclesFile)
 
     def addEndsFromFile(self,file):
         global ends

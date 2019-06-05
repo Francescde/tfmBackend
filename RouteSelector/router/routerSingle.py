@@ -17,7 +17,7 @@ class routerc():
         self.nodes = {}
         self.vehicles = {}
         self.nodesInv = {}
-        self.myrouter = cdll.LoadLibrary('./router/dijkstraListCFile3.so')
+        self.myrouter = cdll.LoadLibrary('./RouteSelector/router/dijkstraListCFile3.so')
         #void inizializeGraph(int V);
         self.myrouter.inizializeGraph.restype = None
         self.myrouter.inizializeGraph.argtypes = [c_int]

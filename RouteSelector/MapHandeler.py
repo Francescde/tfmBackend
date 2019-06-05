@@ -1,8 +1,7 @@
 import psycopg2
 import time
-from router.routerTotal import routerc
-from router.routerSingle import routerc as routercS
-import xml.etree.ElementTree as ET
+from RouteSelector.router.routerTotal import routerc
+from RouteSelector.router.routerSingle import routerc as routercS
 import json
 
 with open('configurationFiles/database.json') as json_file:
