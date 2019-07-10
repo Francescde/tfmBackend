@@ -18,8 +18,6 @@ pip install -r requirements.txt
 #### Posar a punt la base de dades:
 Generar una bd per configurar la connexio es fa al fitxer **database.json** de **configurationFiles**
 
-  Executar el fitxer **utils/sqlFiles/inserta_taules.sql**
-
   Depositar via **osm2psql** la cartografia necesaria a la bd (amb la opcio --slim)
 
   Depositar la cartografia de bombers a la bd jo he empreat **Qgis**
@@ -27,6 +25,8 @@ Generar una bd per configurar la connexio es fa al fitxer **database.json** de *
   Extreure el osm amb els tags necesaris de la cartografia de bombers amb l'sipt **DB2OSMpaths** de **Utils/ShapeBD2OSM**
 
   Depositar via **osm2psql** la cartografia de bombers a la bd (amb la opcio --slim i el prefix coe)
+  
+  Executar el fitxer **utils/sqlFiles/inserta_taules.sql**
 
   Executar el script **storegraphToDB.py**
 
