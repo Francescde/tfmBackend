@@ -141,7 +141,7 @@ with recursive name_tree as (
    union all
    select c.fromNode, c.toNode, c.finalNode, c.vehicle
    from predecesorList c
-   join name_tree p ON p.toNode = c.fromNode
+   left join name_tree p ON p.toNode = c.fromNode
 						and p.finalNode=c.finalNode
 						and p.vehicle=c.vehicle  -- this is the recursion
 )

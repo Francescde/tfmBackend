@@ -110,7 +110,7 @@ def lonlat_to_pixel(lon, lat, inverse_geo_transform):
     return pixel_x, abs(pixel_y)  # y pixel is likly a negative value given geo_transform
 
 
-def create_raster(lons, lats, filename="montserrat-dem.vrt", output_format="MEM"):
+def create_raster(lons, lats, filename="Utils/raster/montserrat-dem.vrt", output_format="MEM"):
     x_rotation = 0
     y_rotation = 0
     cell_width_meters = 15.0
@@ -180,9 +180,10 @@ cursor = conn.cursor()
 
 
 div = 10000000
-cursor.execute("SELECT pon.id, pon.lon::numeric/" + str(div) + " as lon, pon.lat::numeric/" + str(div) + " as lat "
-                                                                                                         "FROM public.planet_osm_nodes pon,public.way_point wp "
-                                                                                                         "where pon.id=wp.id_node");
+cursor.execute("SELECT pon.id, pon.lon::numeric/" + str(div) + " as lon, pon.lat::numeric/" + str(div) + " as lat"
+                                        " FROM public.planet_osm_nodes pon,public.way_point wp"
+                                        " where pon.id=wp.id_node and pon.lat<416400580 and pon.lat>415423130"
+				                        " and pon.lon>17478543 and pon.lon<18759633");
 points = cursor.fetchall()
 
 print("Print each row and it's columns values")
@@ -221,17 +222,23 @@ for p in objectPoints:
         cursor.execute(q)
         conn.commit()
     i = i + 1
+print("done altritudes inside area")
+q = "Update public.planet_osm_nodes SET height = 0 where height is Null;"
+cursor.execute(q)
+conn.commit()
 cursor.close()
+print("done altritudes outside area")
 
 
 cursorWaysToSet = conn.cursor()
 cursorNodesToSet = conn.cursor()
+print("calculating distances")
 
 cursorWaysToSet.execute("SELECT wr.id_way, wr.id_self_key, osmw.tags"
 	" FROM public.way_relation wr,public.planet_osm_ways osmw"
 	" where osmw.id=wr.id_way;");
 ways = cursorWaysToSet.fetchall()
-
+checked = False
 objectPoints = []
 # Afegim latitud i longitud de cada punt a dos vectors
 for id_osm, id_ours, tags in ways:
@@ -244,10 +251,15 @@ for id_osm, id_ours, tags in ways:
     dist=0
     lastPoint=None
     lastPos=None
+    idWayToProced=None
+    listOfId=[]
+    firstId=None
     for id_way, id_node, way_position, lat, lon, height in points:
+        idWayToProced=id_way
         lat=lat/div
         lon=lon/div
         if(lastPoint==None):
+            firstId=id_node
             if(way_position!=1):
                 print('eroooooooooooooooooooor'+id_way)
         else:
@@ -264,12 +276,64 @@ for id_osm, id_ours, tags in ways:
                                        ");")
             distanceSelector = distanceCursor.fetchone()
             dist=dist+distanceSelector[0]
+            distanceCursor.execute("UPDATE public.way_point"
+                " SET dist_from=" + str(dist) +", ramp_neg_from=" + str(negRamp) +","
+                " ramp_pos_from=" + str(posRamp) +", id_from="+str(firstId)+" "
+                " WHERE id_node=" + str(id_node) +" and id_way=" + str(id_way) +";")
         lastPos=way_position
         lastPoint={
+            'id_node':id_node,
             'lat':lat,
             'lon':lon,
             'height':height
         }
+        listOfId.append({
+            'id_node':id_node,
+            'lat':lat,
+            'lon':lon,
+            'height':height
+        })
+    posRamp2=0
+    negRamp2=0
+    dist2=0
+    id_lastNode=lastPoint['id_node']
+    lastPoint=None
+    if(not checked):
+        print(idWayToProced)
+    checked=True
+    if idWayToProced is not None:
+        for element in reversed(listOfId):
+            lat=element['lat']
+            lon=element['lon']
+            height=element['height']
+            id_node=element['id_node']
+            if(lastPoint is not None):
+                if (lastPoint['height'] > height):
+                    posRamp2 = lastPoint['height'] - height
+                else:
+                    negRamp2 = lastPoint['height'] - height
+
+                distanceCursor = conn.cursor()
+                distanceCursor.execute("select ST_Distance("
+                    "ST_SetSRID(ST_MakePoint(" + str(lastPoint['lat']) + ", " + str(
+                    lastPoint['lon']) + ", " + str(lastPoint['height']) + "),4326)::geography,"
+                    "ST_SetSRID(ST_MakePoint(" + str(lat) + ", " + str(lon) + ", " + str(height) + "),4326)::geography"
+                    ");")
+                distanceSelector = distanceCursor.fetchone()
+                dist2 = dist2 + distanceSelector[0]
+                distanceCursor.execute("UPDATE public.way_point"
+                    " SET dist_to=" + str(dist2) + ", ramp_neg_to=" + str(negRamp2) + ","
+                    " ramp_pos_to=" + str(posRamp2) +", id_to="+str(id_lastNode)+" "
+                    " WHERE id_node=" + str(id_node) + " and id_way=" + str(idWayToProced) + ";")
+                conn.commit()
+            lastPoint={
+                'lat':lat,
+                'lon':lon,
+                'height':height
+            }
+    else:
+        print('whooot')
+
     found=0
     selectedTag=None
     for tag in higwaytags:
@@ -287,6 +351,7 @@ for id_osm, id_ours, tags in ways:
         else:
             oneWayDirection=1
 
+
     cursorUpdate = conn.cursor()
     cursorWaysToSet.execute("UPDATE public.way_relation"
 	    " SET dist=" + str(dist) +", ramp_neg=" + str(negRamp) +","
@@ -302,6 +367,18 @@ for id_osm, id_ours, tags in ways:
 ##--coe data
 
 cursor = conn.cursor()
+cursor.execute("UPDATE public.way_point"
+    " SET dist_from=NULL, ramp_neg_from=NULL,"
+    " ramp_pos_from=NULL, dist_to=NULL, ramp_neg_to=NULL,"
+    " ramp_pos_to=NULL"
+    " WHERE is_limit is TRUE;")
+conn.commit()
+
+cursor = conn.cursor()
+cursor.execute("insert into all_nodes_geometry(id, geom, id_to, id_from, dist_to,dist_from)"
+    " select * from all_nodes_geo_view"
+    " GROUP BY id, geom, id_to, id_from, dist_to,dist_from;")
+conn.commit()
 # cursor.execute('select public.update_node_way()')
 # cursor.execute('select public.realitza_talls()')
 # cursor.execute('delete from public.way_point n where Exists(select * from public.way_point n1 where n1.is_limit and n1.id_way =n.id_way and n.way_position>n1.way_position and n1.way_position!=1)')
@@ -364,67 +441,142 @@ objectPoints = []
 # Afegim latitud i longitud de cada punt a dos vectors
 for id_osm, id_ours, tags in ways:
     cursorNodesToSet.execute("SELECT wp.id_way, wp.id_node, wp.way_position, osm_n.lat, osm_n.lon, osm_n.height"
-                    " FROM public.coe_way_point wp, public.coe_nodes osm_n"
-                    " where id_way=" + str(id_ours) +" and wp.id_node=osm_n.id Order by wp.way_position;");
-    points=cursorNodesToSet.fetchall();
-    posRamp=0
-    negRamp=0
-    dist=0
-    lastPoint=None
-    lastPos=None
+                             " FROM public.coe_way_point wp, public.coe_nodes osm_n"
+                             " where id_way=" + str(id_ours) + " and wp.id_node=osm_n.id Order by wp.way_position;");
+    points = cursorNodesToSet.fetchall();
+    posRamp = 0
+    negRamp = 0
+    dist = 0
+    lastPoint = None
+    lastPos = None
+    idWayToProced = None
+    listOfId = []
+    firstId = None
     for id_way, id_node, way_position, lat, lon, height in points:
-        lat=lat/div
-        lon=lon/div
-        if(lastPoint==None):
-            if(way_position!=1):
-                print('eroooooooooooooooooooor'+id_way)
+        idWayToProced = id_way
+        lat = lat / div
+        lon = lon / div
+        if (lastPoint == None):
+            firstId = id_node
+            if (way_position != 1):
+                print('eroooooooooooooooooooor' + id_way)
         else:
-            if(lastPoint['height']>height):
-                posRamp=lastPoint['height']-height
+            if (lastPoint['height'] > height):
+                posRamp = lastPoint['height'] - height
             else:
-                negRamp=lastPoint['height']-height
-            if(lastPos+1!=way_position):
-                print('eroooooooooooooooooooor position'+id_way)
+                negRamp = lastPoint['height'] - height
+            if (lastPos + 1 != way_position):
+                print('eroooooooooooooooooooor position' + id_way)
             distanceCursor = conn.cursor()
             distanceCursor.execute("select ST_Distance("
-                                       "ST_SetSRID(ST_MakePoint("+str(lastPoint['lat'])+", "+str(lastPoint['lon'])+", "+str(lastPoint['height'])+"),4326)::geography,"
-                                       "ST_SetSRID(ST_MakePoint("+str(lat)+", "+str(lon)+", "+str(height)+"),4326)::geography"
-                                       ");")
+                                   "ST_SetSRID(ST_MakePoint(" + str(lastPoint['lat']) + ", " + str(
+                lastPoint['lon']) + ", " + str(lastPoint['height']) + "),4326)::geography,"
+                                                                      "ST_SetSRID(ST_MakePoint(" + str(
+                lat) + ", " + str(lon) + ", " + str(height) + "),4326)::geography"
+                                                              ");")
             distanceSelector = distanceCursor.fetchone()
-            dist=dist+distanceSelector[0]
-        lastPos=way_position
-        lastPoint={
-            'lat':lat,
-            'lon':lon,
-            'height':height
+            dist = dist + distanceSelector[0]
+            distanceCursor.execute("UPDATE public.coe_way_point"
+                                   " SET dist_from=" + str(dist) + ", ramp_neg_from=" + str(negRamp) + ","
+                                    " ramp_pos_from=" + str(posRamp) + ", id_from=" + str(firstId) + " "
+                                    " WHERE id_node=" + str(id_node) + " and id_way=" + str(id_way) + ";")
+        lastPos = way_position
+        lastPoint = {
+            'id_node': id_node,
+            'lat': lat,
+            'lon': lon,
+            'height': height
         }
-    found=0
-    selectedTag=None
+        listOfId.append({
+            'id_node': id_node,
+            'lat': lat,
+            'lon': lon,
+            'height': height
+        })
+    posRamp2 = 0
+    negRamp2 = 0
+    dist2 = 0
+    id_lastNode = lastPoint['id_node']
+    lastPoint = None
+    if (not checked):
+        print(idWayToProced)
+    checked = True
+    if idWayToProced is not None:
+        for element in reversed(listOfId):
+            lat = element['lat']
+            lon = element['lon']
+            height = element['height']
+            id_node = element['id_node']
+            if (lastPoint is not None):
+                if (lastPoint['height'] > height):
+                    posRamp2 = lastPoint['height'] - height
+                else:
+                    negRamp2 = lastPoint['height'] - height
+
+                distanceCursor = conn.cursor()
+                distanceCursor.execute("select ST_Distance("
+                                       "ST_SetSRID(ST_MakePoint(" + str(lastPoint['lat']) + ","
+                                    " " + str(lastPoint['lon']) + ", " + str(lastPoint['height']) + "),4326)::geography,"
+                                    "ST_SetSRID(ST_MakePoint(" + str(lat) + ", " + str(lon) + ","
+                                    " " + str(height) + "),4326)::geography);")
+                distanceSelector = distanceCursor.fetchone()
+                dist2 = dist2 + distanceSelector[0]
+                distanceCursor.execute("UPDATE public.coe_way_point"
+                                       " SET dist_to=" + str(dist2) + ", ramp_neg_to=" + str(negRamp2) + ","
+                                       " ramp_pos_to=" + str(posRamp2) + ", id_to=" + str(id_lastNode) + " "
+                                       " WHERE id_node=" + str(id_node) + " and id_way=" + str(idWayToProced) + ";")
+                conn.commit()
+            lastPoint = {
+                'lat': lat,
+                'lon': lon,
+                'height': height
+            }
+    else:
+        print('whooot')
+
+    found = 0
+    selectedTag = None
     for tag in higwaytags:
-        if(tag in tags):
-            selectedTag=tag
+        if (tag in tags):
+            selectedTag = tag
             ++found
-    oneWayDirection=0
-    if('oneway' in tags):
-        index=tags.index('oneway')
-        if(index<len(tags)-1):
-            if(tags[index+1] in onewayDirTags.keys()):
-                oneWayDirection=onewayDirTags[tags[index+1]]
+    oneWayDirection = 0
+    if ('oneway' in tags):
+        index = tags.index('oneway')
+        if (index < len(tags) - 1):
+            if (tags[index + 1] in onewayDirTags.keys()):
+                oneWayDirection = onewayDirTags[tags[index + 1]]
             else:
-                oneWayDirection=1
+                oneWayDirection = 1
         else:
-            oneWayDirection=1
+            oneWayDirection = 1
 
     cursorUpdate = conn.cursor()
     cursorWaysToSet.execute("UPDATE public.coe_way_relation"
-	    " SET dist=" + str(dist) +", ramp_neg=" + str(negRamp) +","
-        " ramp_pos=" + str(posRamp) +", oneway=" + str(oneWayDirection) +", highway_type='" + selectedTag +"'"
-	    " WHERE id_self_key=" + str(id_ours) +";")
+                            " SET dist=" + str(dist) + ", ramp_neg=" + str(negRamp) + ","
+                            " ramp_pos=" + str(posRamp) + ", oneway=" + str(oneWayDirection) + ", highway_type='" + selectedTag + "'"
+                           " WHERE id_self_key=" + str(id_ours) + ";")
     conn.commit()
 
-    if(found>1 or selectedTag==None):
+    if (found > 1 or selectedTag == None):
         print(tags)
         break;
+
+##--coe data
+
+cursor = conn.cursor()
+cursor.execute("UPDATE public.coe_way_point"
+               " SET dist_from=NULL, ramp_neg_from=NULL,"
+               " ramp_pos_from=NULL, dist_to=NULL, ramp_neg_to=NULL,"
+               " ramp_pos_to=NULL"
+               " WHERE is_limit is TRUE;")
+conn.commit()
+
+cursor = conn.cursor()
+cursor.execute("insert into coe_all_nodes_geometry(id, geom, id_to, id_from, dist_to,dist_from)"
+               " select * from coe_all_nodes_geo_view"
+               " GROUP BY id, geom, id_to, id_from, dist_to,dist_from;")
+conn.commit()
 
 conn.close()
 

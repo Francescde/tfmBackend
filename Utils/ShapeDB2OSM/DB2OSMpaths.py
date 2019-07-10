@@ -1,6 +1,7 @@
 import psycopg2
 import utm
 import re
+import xml.etree.ElementTree as ET
 
 conn=psycopg2.connect(database="Montserrat2", user="postgres", password="Montserrat", host="localhost")
 
@@ -55,7 +56,7 @@ def read_points_from_path(paths,file,i):
                 paths.append(path)
 
 
-def read_paths(lines,doc,file,c,category,tag):
+def read_paths(lines2,doc,file,c,category,tag):
         paths=[]
         path={}
         points={}
@@ -78,43 +79,52 @@ def read_paths(lines,doc,file,c,category,tag):
                 conn.commit()
                 cursor.close()
         for i in range(0,len(points_lat_lon_z)):
-                lines.append("  <node id='"+str(-i-1)+"' action='modify' lat='"+str(points_lat_lon_z[i][1])+"' lon='"+str(points_lat_lon_z[i][0])+"' />\n")
+                doc.write("  <node id='"+str(-i-1)+"' action='modify' lat='"+str(points_lat_lon_z[i][1])+"' lon='"+str(points_lat_lon_z[i][0])+"' />\n")
                 id_points=-i-1
                 c+=1
         id_points -= 1
+        cursorEnconterPoints = conn.cursor()
+
+        cursorEnconterPoints.execute("SELECT name, ST_AsKML(geom)"
+                                     " FROM public.\"COE_montserrat_punts\""
+                                     " where folderpath like '%Punt de trobada%' ;");
+        pointsList = cursorEnconterPoints.fetchall()
+        for name, point in pointsList:
+                root = ET.fromstring(point)
+                for child in root:
+                        data = child.text.split(',')
+                        lat, lon = float(data[1]), float(data[0])
+                        doc.write("  <node id='"+str(id_points)+"' action='modify' lat='"+str(lat)+"' lon='"+str(lon)+"'>\n"
+                                                "    <tag k='name' v='"+name+"' />\n"
+                                        "  </node>\n")
+                        id_points -= 1
         for i in range(0,len(paths)):
-                        lines.append(" <way id='"+str(id_points-i)+"' action='modify'>\n")
+                        doc.write(" <way id='"+str(id_points-i)+"' action='modify'>\n")
                         c+=1
                         for x in range(0,len(paths[i]["points"])):
                                 n=points_lat_lon_z.index(paths[i]["points"][x])
-                                lines.append("  <nd ref='"+str(-n-1)+"' />\n")
+                                doc.write("  <nd ref='"+str(-n-1)+"' />\n")
                                 c+=1
                         if(paths[i]["name"]!="NULL"):
-                                lines.append("  <tag k='name' v='"+paths[i]["name"].replace("'", "&apos;")+"' />\n")
+                                doc.write("  <tag k='name' v='"+paths[i]["name"].replace("'", "&apos;")+"' />\n")
                                 c+=1
                         if(paths[i]["folder"]!="NULL"):
-                                lines.append("  <tag k='folder' v='"+paths[i]["folder"].replace("'", "&apos;")+"' />\n")
+                                doc.write("  <tag k='folder' v='"+paths[i]["folder"].replace("'", "&apos;")+"' />\n")
                                 c+=1
-                        lines.append("  <tag k='ogc_fid' v='"+str(i + 1)+"' />\n")
-                        lines.append("  <tag k='"+category+"' v='"+tag+"' />\n")
-                        lines.append(" </way>\n")
+                        doc.write("  <tag k='ogc_fid' v='"+str(i + 1)+"' />\n")
+                        doc.write("  <tag k='"+category+"' v='"+tag+"' />\n")
+                        doc.write(" </way>\n")
                         c+=3
-        lines.append("</osm>\n")
-        i=2
-        for i in range(2,c):
-                doc.write(lines[i])
+        doc.write("</osm>\n")
 
 def read_table_from_db(file,category,tag):
-	i=0
-	lines = []
-	doc=open(file+".osm", "w")
-	lines.append("<?xml version='1.0' encoding='UTF-8'?>")
-	lines.append("<osm version='0.6' generator='Python Script'>")
-	c=2
-	for i in range (0,2):
-		doc.write(lines[i]+"\n")
-	read_paths(lines,doc,file,c,category,tag)
-	doc.close()
+        i=0
+        lines = []
+        doc = open(file+".osm", "w")
+        doc.write("<?xml version='1.0' encoding='UTF-8'?>")
+        doc.write("<osm version='0.6' generator='Python Script'>")
+        read_paths(lines,doc,file,2,category,tag)
+        doc.close()
 
 def main():
         read_table_from_db('COE_montserrat_linies','highway','path')

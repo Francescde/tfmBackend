@@ -33,12 +33,12 @@ Generar una bd per configurar la connexio es fa al fitxer **database.json** de *
 #### Compilar les llibreries de explirar en c:
 Dins de router executar 
 ```
-g++ -c -fPIC dijkstraListCFile4.cc -o dijkstraListCFile3.o
-g++ -shared -W1,-soname,dijkstraListCFile3.so -o dijkstraListCFile3.so dijkstraListCFile3.o
+gcc -c -fPIC dijkstraListCFile4.cc -o dijkstraListCFile3.o
+gcc -shared -W1,-soname,dijkstraListCFile3.so -o dijkstraListCFile3.so dijkstraListCFile3.o
 
 
-g++ -c -fPIC dijkstraMultimodalTotal.cc -o dijkstraMultimodalTotal.o
-g++ -shared -W1,-soname,dijkstraMultimodalTotal.so -o dijkstraMultimodalTotal.so dijkstraMultimodalTotal.o
+gcc -c -fPIC dijkstraMultimodalTotal.cc -o dijkstraMultimodalTotal.o
+gcc -shared -W1,-soname,dijkstraMultimodalTotal.so -o dijkstraMultimodalTotal.so dijkstraMultimodalTotal.o
 ```
 
 #### Executar flask:

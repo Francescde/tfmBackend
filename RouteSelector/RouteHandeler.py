@@ -2,7 +2,8 @@ from RouteSelector.VehiclesHandeler import vehicles
 from RouteSelector.MapHandeler import MapHandeler
 from RouteSelector.originHandeler import give_origins, giveVehiclesStr
 from RouteSelector.EncounterPointHandeler import retriveEncounterPoints
-from RouteSelector.pointHandeler import nearestFinalNodes2, removeUnexploredNodes
+from RouteSelector.pointHandeler import nearestFinalNodes2, removeUnexploredNodes, nearestFinalNodes3, \
+    getCOENearestNode, removeUnexploredNodes2
 import time
 
 def min_route_walking(routes):
@@ -81,7 +82,7 @@ class RouteHandeler():
         timeTostorePredecesors = time.time()
         # obte la llista de precedencies
         unexploredList = self.graphUnimodal.getUnexplored(enc['point'])
-        removeUnexploredNodes(unexploredList)
+        removeUnexploredNodes2(unexploredList)
         # guardala a bd
         # insertPredecesorList(predecesorList,enc['point'])
         print(time.time() - timeTostorePredecesors, "time to store predecesors")
@@ -129,9 +130,10 @@ class RouteHandeler():
         global ends
         timeToreadPoints=time.time()
         finals = give_origins(file)
-        ends=nearestFinalNodes2(finals)
+        ends=nearestFinalNodes3(finals)
         for final in ends:
             self.graphUnimodal.addfinal(final['point'])
+        print(len(ends))
         print("time to read points")
         print(time.time()-timeToreadPoints)
 
@@ -170,8 +172,9 @@ class RouteHandeler():
     def getRoutesWithMandatory(self,lat,lon,vehicles):
         global ends
         global encPoints
-        maxPoints=5
-        start = self.graphMultimodal.getNearestNode(lat, lon)
+        maxPoints=3
+        start, extraPoint, dist_from_start, dist_to_point = getCOENearestNode(lat, lon)
+        #start = self.graphMultimodal.getNearestNode(lat, lon)
         #-123204
         #[-131168, -102262, -124744, -157746]#[-143102, -170904, -107948, -81882, -44288, -50156,-123204]
         endsPointList=[end['encounter'] for end in encPoints]
@@ -180,6 +183,7 @@ class RouteHandeler():
         self.graphMultimodal.solve(start, endsPointList)
         print('solve multimodal')
         print(time.time()-timeStartMultimodal)
+        timeExplore=time.time()-timeStartMultimodal
         vehiclesSTR=giveVehiclesStr()
         routes = {}
         meetingPoints={}
@@ -194,6 +198,9 @@ class RouteHandeler():
                 values = self.graphMultimodal.myrouter.findPredecesorValues(self.graphMultimodal.nodesInv[end['encounter']], 1)
                 end["value"]=values[3]
                 encPointsToExplore.append(end)
+            if(end==start):
+                encPointsToExplore=[end]
+                break
         encPointsToExplore = sorted(encPointsToExplore, key=lambda k: k['value'])
         #print(encPointsToExplore)
         #print('-----------------------------------------------------------------')
@@ -310,7 +317,9 @@ class RouteHandeler():
             for vehicle in meetingPoints[meetPoint]['vehicles']:
                 #print(meetingPoints[meetPoint]['vehicles'])
                 #print(encPointsDic[meetPoint])
+                timeToExplore=time.time()
                 self.graphUnimodal.solve(encPointsDic[meetPoint]['point'], vehicle)
+                timeExplore += time.time() - timeToExplore
                 #print('solved')
                 for end in ends:
                     if(end['type']==-1 or end['type']==vehicle):
@@ -344,6 +353,7 @@ class RouteHandeler():
 
         print('totaltime')
         print(time.time()-timegloablalMultimodal)
+        print(timeExplore)
 
 
         #print(encPoints)

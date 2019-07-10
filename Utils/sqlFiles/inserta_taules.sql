@@ -20,16 +20,25 @@ BEGIN
   END$$;
 
 	--eliminem taules anteriors
-	DROP VIEW IF EXISTS final_nodes;
-	DROP VIEW IF EXISTS all_nodes;
+  DROP VIEW IF EXISTS final_nodes;
+  DROP VIEW IF EXISTS all_nodes_geo_view;
+  DROP VIEW IF EXISTS all_nodes;
   DROP TABLE IF EXISTS Way_Point;
   DROP TABLE IF EXISTS Way_Relation;
   --creem tamules
   Create table Way_Point (
-	  id_way bigint,
-	  id_node bigint,
-	  way_position int,
-	  is_limit bool,
+		id_way bigint,
+		id_node bigint,
+		way_position int,
+		is_limit bool,
+		id_from bigint,
+		dist_from numeric(15,5),
+		ramp_neg_from numeric(15,5),
+		ramp_pos_from numeric(15,5),
+		id_to bigint,
+		dist_to numeric(15,5),
+		ramp_neg_to numeric(15,5),
+		ramp_pos_to numeric(15,5),
       PRIMARY KEY(id_way, id_node, way_position));
   Create table Way_Relation (
 	  id_way bigint,
@@ -185,6 +194,7 @@ BEGIN
 
   DROP VIEW IF EXISTS coe_final_nodes;
   DROP VIEW IF EXISTS coe_all_nodes;
+  DROP VIEW IF EXISTS coe_all_nodes_geo_view;
   DROP TABLE IF EXISTS coe_Way_Point;
   DROP TABLE IF EXISTS coe_Way_Relation;
   --creem tamules
@@ -193,6 +203,14 @@ BEGIN
 	  id_node bigint,
 	  way_position int,
 	  is_limit bool,
+      id_from bigint,
+      dist_from numeric(15,5),
+      ramp_neg_from numeric(15,5),
+      ramp_pos_from numeric(15,5),
+      id_to bigint,
+      dist_to numeric(15,5),
+      ramp_neg_to numeric(15,5),
+      ramp_pos_to numeric(15,5),
       PRIMARY KEY(id_way, id_node, way_position));
   Create table coe_Way_Relation (
 	  id_way bigint,
@@ -339,6 +357,87 @@ BEGIN
     (ST_SetSRID(ST_MakePoint(CAST(osmp.lon AS FLOAT)/10000000, CAST(osmp.lat AS FLOAT)/10000000),4326)) as geom
     from public.way_point wp,public.planet_osm_nodes osmp
     where wp.id_node=osmp.id;
+
+CREATE OR REPLACE VIEW public.all_nodes_geo_view AS
+ SELECT osmp.id,
+    st_setsrid(st_makepoint(osmp.lon::double precision / 10000000::double precision, osmp.lat::double precision / 10000000::double precision), 4326) AS geom,
+    wp.id_to,
+    wp.id_from,
+    wp.dist_to,
+    wp.dist_from
+   FROM way_point wp,
+    planet_osm_nodes osmp
+  WHERE wp.id_node = osmp.id;
+
+ALTER TABLE public.all_nodes_geo_view
+    OWNER TO postgres;
+
+
+Drop table IF EXISTS all_nodes_geometry;
+CREATE TABLE public.all_nodes_geometry
+(
+    id bigint,
+    geom geometry,
+    id_to bigint,
+    id_from bigint,
+    dist_to numeric(15,5),
+    dist_from numeric(15,5)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.all_nodes_geometry
+    OWNER to postgres;
+
+
+CREATE INDEX all_nodes_geometry_gix
+    ON public.all_nodes_geometry USING gist
+    (geom)
+    TABLESPACE pg_default;
+---------------------------
+
+CREATE OR REPLACE VIEW public.coe_all_nodes_geo_view AS
+ SELECT osmp.id,
+    st_setsrid(st_makepoint(osmp.lon::double precision / 10000000::double precision, osmp.lat::double precision / 10000000::double precision), 4326) AS geom,
+    wp.id_to,
+    wp.id_from,
+    wp.dist_to,
+    wp.dist_from
+   FROM coe_way_point wp,
+    coe_nodes osmp
+  WHERE wp.id_node = osmp.id;
+
+ALTER TABLE public.coe_all_nodes_geo_view
+    OWNER TO postgres;
+
+
+Drop table IF EXISTS coe_all_nodes_geometry;
+CREATE TABLE public.coe_all_nodes_geometry
+(
+    id bigint,
+    geom geometry,
+    id_to bigint,
+    id_from bigint,
+    dist_to numeric(15,5),
+    dist_from numeric(15,5)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.coe_all_nodes_geometry
+    OWNER to postgres;
+
+
+CREATE INDEX coe_all_nodes_geometry_gix
+    ON public.coe_all_nodes_geometry USING gist
+    (geom)
+    TABLESPACE pg_default;
+--------------------------
+
 
 
   Drop table IF EXISTS temp_vehiclePositions;
